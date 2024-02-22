@@ -4,9 +4,42 @@
 @import url('./category-list.css');
 @import url('./donation-block.css');
 @import url('./modal.css');
+@import url('./footer.css');
 @import url('./shopping-list.css');
 @import url('./visually-hidden.css');
 
+@font-face {
+    font-family: DM-Sans;
+    src: url(/src/fonts/DMSans-Regular.woff2),
+        url(/src/fonts/DMSans-Regular.woff);
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: DM-Sans;
+    src: url(/src/fonts/DMSans-Italic.woff2),
+        url(/src/fonts/DMSans-Italic.woff);
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: DM-Sans;
+    src: url(/src/fonts/DMSans-Medium.woff2),
+        url(/src/fonts/DMSans-Medium.woff);
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: DM-Sans;
+    src: url(/src/fonts/DMSans-Bold.woff2),
+        url(/src/fonts/DMSans-Bold.woff);
+    font-style: normal;
+    font-weight: 700;
+}
+
 body {
-    font-family: "DM Sans", sans-serif;
+    font-family: "DM-Sans", sans-serif;
 }
