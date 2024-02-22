@@ -4,3 +4,9 @@
 @import url('./category-list.css');
 @import url('./donation-block.css');
 @import url('./modal.css');
+@import url('./shopping-list.css');
+@import url('./visually-hidden.css');
+
+body {
+    font-family: "DM Sans", sans-serif;
+}
