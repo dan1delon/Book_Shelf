@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export async function getCategories () {
+export async function getCategories() {
     const {data} = await axios.get('https://books-backend.p.goit.global/books/category-list');
     return data;
 }
