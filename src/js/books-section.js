@@ -6,20 +6,33 @@ async function fetchAndDisplayBooks() {
     const data = await response.json();
 
     const booksListContainer = document.querySelector('.books-list');
+    booksListContainer.innerHTML = '';
+
+    let booksToShow = 1;
+
+    if (window.innerWidth >= 768 && window.innerWidth < 1440) {
+      booksToShow = 3;
+    } else if (window.innerWidth >= 1440) {
+      booksToShow = 4;
+    }
 
     const randomCategories = getRandomElements(data, 4);
 
-    randomCategories.forEach(category => {
+    randomCategories.map(category => {
       const categoryElement = document.createElement('div');
       categoryElement.classList.add('category');
 
       const categoryTitle = document.createElement('h2');
       categoryTitle.textContent = category.list_name;
+      categoryTitle.classList.add('category-title');
       categoryElement.appendChild(categoryTitle);
 
-      const randomBooks = getRandomElements(category.books, 4);
+      const randomBooks = getRandomElements(category.books, booksToShow);
 
-      randomBooks.forEach(book => {
+      const booksContainer = document.createElement('div');
+      booksContainer.classList.add('books-container');
+
+      randomBooks.map(book => {
         const bookItem = document.createElement('div');
         bookItem.classList.add('book-item');
 
@@ -32,16 +45,21 @@ async function fetchAndDisplayBooks() {
         `;
         bookItem.innerHTML = bookInfo;
 
-        categoryElement.appendChild(bookItem);
+        booksContainer.appendChild(bookItem);
       });
 
+      categoryElement.appendChild(booksContainer);
+
+      const seeMoreButtonContainer = document.createElement('div');
+      seeMoreButtonContainer.classList.add('see-more-button-container');
       const seeMoreButton = document.createElement('button');
       seeMoreButton.classList.add('see-more-button');
       seeMoreButton.textContent = 'See more';
       seeMoreButton.addEventListener('click', () => {
         displayCategoryBooks(category.list_name);
       });
-      categoryElement.appendChild(seeMoreButton);
+      seeMoreButtonContainer.appendChild(seeMoreButton);
+      categoryElement.appendChild(seeMoreButtonContainer);
 
       booksListContainer.appendChild(categoryElement);
     });
@@ -49,6 +67,8 @@ async function fetchAndDisplayBooks() {
     console.error('Error fetching books:', error);
   }
 }
+
+window.addEventListener('resize', fetchAndDisplayBooks);
 
 async function displayCategoryBooks(categoryName) {
   try {
@@ -74,12 +94,15 @@ async function displayCategoryBooks(categoryName) {
     categoryTitle.classList.add('books-section-title');
     booksListContainer.appendChild(categoryTitle);
 
-    data.forEach(book => {
+    const booksContainer = document.createElement('div');
+    booksContainer.classList.add('books-container');
+
+    data.map(book => {
       const bookItem = document.createElement('div');
       bookItem.classList.add('book-item');
 
       const bookInfo = `
-        <div class="book-info">
+        <div class="book-info book-in-category">
           <img src="${book.book_image}" alt="${book.title}" class="book-image">
           <h3 class="book-title">${book.title}</h3>
           <p class="book-author">${book.author}</p>
@@ -87,8 +110,10 @@ async function displayCategoryBooks(categoryName) {
       `;
       bookItem.innerHTML = bookInfo;
 
-      booksListContainer.appendChild(bookItem);
+      booksContainer.appendChild(bookItem);
     });
+
+    booksListContainer.appendChild(booksContainer);
   } catch (error) {
     console.error('Error fetching books:', error);
   }
