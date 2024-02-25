@@ -104,6 +104,8 @@ max-width: 335px;
 }
 
 .books-image {
+    display: block;
+    max-width: 100%;
     width: 335px;
     height: 485px;
     border-radius: 8px;
@@ -166,7 +168,7 @@ max-width: 335px;
                     color: #FFF;
                 }
             
-    .books-bestsellers .books-item:not(:first-child) {
+    .books-bestsellers-item .books-item:not(:first-child) {
         display: none;
     }
 
@@ -210,8 +212,7 @@ max-width: 335px;
     }
 
     .books-image {
-        display: block;
-        max-width: 100%;
+        
         width: 218px;
         height: 316px;
     }
@@ -225,6 +226,7 @@ max-width: 335px;
     }
     .books-bestsellers-list {
         display: flex;
+        width: 704px;
         gap: 25px;
         margin-bottom: 20px;
     } 
@@ -233,6 +235,13 @@ max-width: 335px;
 }
 .books-bestsellers .books-item:nth-child(-n + 3) {
     display: block;
+}
+.books-bestsellers-item {
+    width: 218px;
+
+}
+.books-bestsellers-btn {
+    margin-left: auto;
 }
     }
 
