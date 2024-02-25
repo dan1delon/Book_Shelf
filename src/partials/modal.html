@@ -1,30 +1,20 @@
-<!-- Book Card -->
-<div class="book-card" id="bookCard">
-
-    <h2>Book</h2>
-
-
-</div>
-
-<!-- Modal -->
-<div class="about-book__backdrop is-active" data-modal="">
-    <div class="modal-form" id="myModal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="modal-box">
-                <img src="" alt="Book Cover">
-                <h2 class="title">Book Title</h2>
-                <p class="author"> John Doe</p>
-            </div>
-            <p class="article"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <div class="buy-links">
-                <a href="#" class="amazon-link">Amazon</a>
-                <a href="#" class="apple-link">Apple Books</a>
-            </div>
-            <button class="add-to-list">Add to Shopping List</button>
-            <p class="congrat-text">Сongratulations! You have added the book to the shopping list. To delete, press the
-                button “Remove from the shopping
-                list.</p>
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <div class="div-close-modal">
+            <button class="btn-close-modal" data-modal-close>
+                <svg class="svg-close" width="20" height="20">
+                    <use href="./img/symbol-defs.svg#icon-cross" class="use-close"></use>
+                </svg>
+            </button>
         </div>
+        <div class="img-and-description">
+        </div>
+        <div class="div-btn-modal">
+            <button class="btn-modal btn-modal-add-js is-hidden" type="submit">Add to shopping list</button>
+        </div>
+        <p class="under-modal-btn-text visually-hidden">
+            Сongratulations! You have added the book to the shopping list.
+            To delete, press the button “Remove from the shopping list”.
+        </p>
     </div>
 </div>
