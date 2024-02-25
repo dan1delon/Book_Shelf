@@ -7,17 +7,24 @@
 </div>
 
 <!-- Modal -->
-<div class="modal" id="myModal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <img src="" alt="Book Cover">
-        <h2>Book Title</h2>
-        <p>Author: John Doe</p>
-        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <div class="buy-links">
-            <a href="#" class="amazon-link">Amazon</a>
-            <a href="#" class="apple-link">Apple Books</a>
+<div class="about-book__backdrop is-active" data-modal="">
+    <div class="modal-form" id="myModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-box">
+                <img src="" alt="Book Cover">
+                <h2 class="title">Book Title</h2>
+                <p class="author"> John Doe</p>
+            </div>
+            <p class="article"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="buy-links">
+                <a href="#" class="amazon-link">Amazon</a>
+                <a href="#" class="apple-link">Apple Books</a>
+            </div>
+            <button class="add-to-list">Add to Shopping List</button>
+            <p class="congrat-text">Сongratulations! You have added the book to the shopping list. To delete, press the
+                button “Remove from the shopping
+                list.</p>
         </div>
-        <button class="add-to-list">Add to Shopping List</button>
     </div>
 </div>

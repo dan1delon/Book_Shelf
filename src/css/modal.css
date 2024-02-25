@@ -1,0 +1,107 @@
+/* Стили для модального окна */
+.about-book__backdrop {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.about-book__backdrop.is-active {
+    display: block;
+}
+
+.modal-form {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+.modal-content {
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-box {
+    text-align: center;
+}
+
+.modal-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.modal-box .title {
+    margin-top: 10px;
+}
+
+.modal-box .author {
+    margin: 5px 0;
+}
+
+.modal-box .article {
+    margin: 10px 0;
+}
+
+.buy-links {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.add-to-list {
+    display: block;
+    margin: 20px auto;
+}
+
+.congrat-text {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+/* Стили для кнопки "Add to Shopping List" */
+.add-to-list {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.add-to-list:hover {
+    background-color: #0056b3;
+}
+
+/* Mobile */
+
+.modal-content {
+    width: 335px;
+    height: 762px;
+    background-color: #fff;
+    border-radius: 18px;
+    margin: 70px 15px 30px;
+    padding: 40px 25px;
+    position: relative;
+    border: 2px solid var(--black);
+}
