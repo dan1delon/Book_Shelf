@@ -100,7 +100,7 @@
 
 @media screen and (min-width: 1440px) {
   .book-item {
-    width: calc(25% - 24px);
+    width: calc(20% - 24px);
   }
 }
 

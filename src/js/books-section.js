@@ -13,13 +13,13 @@ async function fetchAndDisplayBooks() {
     if (window.innerWidth >= 768 && window.innerWidth < 1440) {
       booksToShow = 3;
     } else if (window.innerWidth >= 1440) {
-      booksToShow = 4;
+      booksToShow = 5;
     }
 
     const randomCategories = getRandomElements(data, 4);
 
     randomCategories.map(category => {
-      const categoryElement = document.createElement('div');
+      const categoryElement = document.createElement('li');
       categoryElement.classList.add('category');
 
       const categoryTitle = document.createElement('h2');
@@ -29,11 +29,11 @@ async function fetchAndDisplayBooks() {
 
       const randomBooks = getRandomElements(category.books, booksToShow);
 
-      const booksContainer = document.createElement('div');
+      const booksContainer = document.createElement('ul');
       booksContainer.classList.add('books-container');
 
       randomBooks.map(book => {
-        const bookItem = document.createElement('div');
+        const bookItem = document.createElement('li');
         bookItem.classList.add('book-item');
 
         const bookInfo = `
