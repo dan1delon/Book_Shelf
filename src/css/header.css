@@ -61,7 +61,8 @@
         color: var(--text-color);
         left: 0;
         top: 0;
-        position: absolute;
+        position: sticky;
+        z-index: 100;
 }
 
 .bookshelf {
