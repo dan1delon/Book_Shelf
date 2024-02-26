@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book shelf</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" 
+    <title>Shopping List</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.css"
         integrity="sha512-gA2Bvu0/hw4oj0Lp8ZHjK+o3S4BE5m8d/wNVy6ktKLhHKPpWLQwv9ixzuWirWOakoJqlBdePq2NhoCaUOQ5npQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/styles.css" />
-</head>
+  </head>
 
-<body>
-
+  <body>
     <load src="./header.html" />
 
     <main>
+      <aside class="sidebar">
+        <load src="./donation-block.html" />
+      </aside>
 
-        <aside class="sidebar">
-            <load src="./donation-block.html" />
-        </aside>
-
-        <section class="main-content">
-
-        </section>
-
+      <section class="main-content">
+        <div class="container-shop" id="cart">
+          <h1 class="title-shoplist">
+            Shopping <span class="shop-span">List</span>
+          </h1>
+          <div class="content-cart" id="cart-content" style="display: block">
+            <p class="text-cart">
+              This page is empty, add some books and proceed to order.
+            </p>
+          </div>
+          <div id="shopping-list-books-container"></div>
+        </div>
+      </section>
     </main>
 
     <load src="./footer.html" />
 
     <script type="module" src="../main.js"></script>
-
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </body>
 </html>
