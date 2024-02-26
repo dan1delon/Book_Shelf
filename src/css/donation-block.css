@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   background: #000000;
@@ -38,16 +38,16 @@ h1 {
   width: 38px;
   height: 38px;
   cursor: pointer;
-  /* transform: rotate(-90deg); */
+  transform: rotate(-90deg);
   border-radius: 50%;
   border: none;
   position: absolute;
   top: 10%;
   left: 45%;
   background-color: #fff;
-}
+} */
 
-.swiper-container {
+/* .swiper-container {
   width: 100%;
   height: 100%;
 }
@@ -87,4 +87,4 @@ h1 {
   height: 38px;
   border-radius: 50%;
   filter: brightness(0) invert(1);
-}
+} */
