@@ -109,6 +109,7 @@
 .amazon-modal::before {
     content: '';
     display: block;
+    /* img пока нет */
     background-image: url(../img/modal-amazon.svg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -125,6 +126,7 @@
 .book-modal::before {
     content: '';
     display: block;
+    /* img пока нет */
     background-image: url(../img/modal-book.svg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -141,6 +143,7 @@
 .books-modal::before {
     content: '';
     display: block;
+    /* img пока нет */
     background-image: url(../img/modal-books.svg);
     background-size: contain;
     background-repeat: no-repeat;
