@@ -38,33 +38,50 @@
       }
     });
 
-    document.addEventListener('DOMContentLoaded', function() {
-      const burgerSwitch = document.getElementById('burger');
-      const backdrop = document.getElementById('backdrop');
-      const burgerIcon = document.querySelector('.icon-logo');
-      const navLinks = document.querySelector('.nav-links');
-      const closeIcon = document.getElementById('x-close'); // Получаем иконку закрытия
-
-      // Функция для открытия/закрытия меню и показа/скрытия бекдропа
-      function burgerMenu() {
-        // Если переключатель уже включен, выключаем его и скрываем бекдроп
-        if (burgerSwitch.checked) {
-          burgerSwitch.checked = false;
-          backdrop.style.display = 'none';
-          navLinks.style.height = '0';
-          closeIcon.style.opacity = '0'; // Скрываем иконку закрытия
-        } else {
-          // Если переключатель выключен, включаем его и показываем бекдроп
-          burgerSwitch.checked = true;
-          backdrop.style.display = 'block';
-          navLinks.style.height = '100vh';
-          closeIcon.style.opacity = '1'; // Показываем иконку закрытия
-        }
+ document.addEventListener('DOMContentLoaded', function() {
+      // Проверяем текущую страницу и применяем соответствующие стили к ссылкам
+      const currentPage = window.location.pathname;
+      const homeLink = document.getElementById('backdrop-home-link');
+      const shoppingListLink = document.getElementById('backdrop-shopping-list-link');
+      
+      if (currentPage === '/') {
+        homeLink.classList.add('button');
+        shoppingListLink.classList.remove('button');
+      } else if (currentPage === '/shopping-list') {
+        homeLink.classList.remove('button');
+        shoppingListLink.classList.add('button');
       }
-
-      // Обработчик клика на иконку бургер-меню
-      burgerIcon.addEventListener('click', burgerMenu);
-
-      // Обработчик клика на бекдроп для закрытия меню
-      backdrop.addEventListener('click', burgerMenu);
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+  const burgerSwitch = document.getElementById('burger');
+  const backdrop = document.getElementById('backdrop');
+  const burgerIcon = document.querySelector('.icon-logo');
+  const navLinks = document.querySelector('.nav-links');
+  const closeIcon = document.getElementById('x-close'); // Получаем иконку закрытия
+
+  // Функция для открытия/закрытия меню и показа/скрытия бекдропа
+  function burgerMenu() {
+    if (burgerSwitch.checked) {
+      burgerSwitch.checked = false;
+      backdrop.style.display = 'none';
+      navLinks.style.height = '0';
+      closeIcon.style.display = 'none'; // Скрываем иконку закрытия
+      burgerIcon.style.display = 'block'; // Показываем иконку бургера
+    } else {
+      burgerSwitch.checked = true;
+      backdrop.style.display = 'block';
+      navLinks.style.height = '100vh';
+      closeIcon.style.display = 'block'; // Показываем иконку закрытия
+      burgerIcon.style.display = 'none'; // Скрываем иконку бургера
+    }
+  }
+
+  // Обработчик клика на иконку бургер-меню
+  burgerIcon.addEventListener('click', burgerMenu);
+
+  // Обработчик клика на иконку закрытия
+  closeIcon.addEventListener('click', burgerMenu);
+});
+
+
