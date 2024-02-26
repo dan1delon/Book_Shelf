@@ -1,9 +1,9 @@
+import { getTopBooks } from "./fetchAPI";
+
 async function fetchAndDisplayBooks() {
   try {
-    const response = await fetch(
-      'https://books-backend.p.goit.global/books/top-books'
-    );
-    const data = await response.json();
+
+    const data = await getTopBooks();
 
     const booksListContainer = document.querySelector('.books-list');
     booksListContainer.innerHTML = '';

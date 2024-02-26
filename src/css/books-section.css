@@ -19,6 +19,7 @@
 @media screen and (min-width: 1440px) {
   .books-section {
     padding: 0 24px;
+    width: 996px;
   }
 }
 
