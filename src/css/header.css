@@ -26,18 +26,41 @@
     margin-right: 20px;
 }
 
+.x-close {
+    stroke: black;
+}
+
 .logo-dark {
     margin-left: 23px;
 }
 
 .dark-mode .icon-logo {
     stroke: white;
-    /* Задаем белый цвет для бургер-меню в темном режиме */
+}
+
+.dark-mode .x-close {
+    stroke: white;
 }
 
 .dark-mode .icon-cart {
     stroke: white;
     fill: white;
+}
+
+.dark-mode .header {
+    width: 100%;
+        height: 64px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        border: 1.5px solid white;
+        border-radius: 0px 0px 8px 8px;
+        background: var(--bg-color);
+        color: var(--text-color);
+        left: 0;
+        top: 0;
+        position: absolute;
 }
 
 .bookshelf {
@@ -121,11 +144,29 @@ input:checked+.slider:before {
     margin-right: 7px;
 }
 
+.backdrop-icon-cart {
+    display: inline-block;
+        width: 1em;
+        height: 1em;
+        fill: white;
+        width: 20px;
+        height: 20px;
+        margin-bottom: 2px;
+        margin-right: 7px;
+}
+
 .nav-link.button {
     gap: 7px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.backdrop-nav-link.button {
+    gap: 7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 }
 
 .dark-mode {
@@ -138,6 +179,36 @@ input:checked+.slider:before {
 .nav-links {
     display: none;
 }
+
+  .backdrop-nav-links {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .backdrop-nav-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 16px;
+      border-radius: 36px;
+      background: transparent;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      gap: 7px;
+  }
+
+  .backdrop-nav-link.button {
+      background: rgb(234, 198, 69);
+      color: black;
+  }
+  
 
 @media (min-width: 768px) {
     .header {
@@ -152,6 +223,8 @@ input:checked+.slider:before {
         text-transform: uppercase;
         flex: auto;
     }
+
+ 
 
     .switch {
         position: relative;
@@ -174,9 +247,11 @@ input:checked+.slider:before {
         gap: 7px;
     }
 
-    .icon-logo {
-        display: none;
-    }
+
+
+        .icon-logo {
+            display: none;
+        }
 
     .nav-link.button {
         background: rgb(234, 198, 69);
@@ -184,6 +259,7 @@ input:checked+.slider:before {
         color: black;
         /* Цвет текста кнопки Home */
     }
+       
 }
 
 /* Стили для бекдропа */
@@ -194,12 +270,47 @@ input:checked+.slider:before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(191.37% 191.09% at 60% -23%, rgb(79, 46, 232) 18.027%, rgb(255, 255, 255) 100%);
     z-index: 999;
-
+    background: radial-gradient(191.37% 191.09% at 60% -23%, rgb(79, 46, 232) 18.027%, rgb(255, 255, 255) 100%);
 }
 
+.background-image {
+    width: 450px;
+    height: 439px;
+    position: absolute;
+    left: -65px;
+    right: -10px;
+    bottom: -186px;
+    background-image: url('../img/group-6-1.png');
+    background-size: cover;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+}
 
-.x-close.hidden {
+.icon-logo,
+.x-close {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.icon-logo {
+    left: 10px;
+    
+}
+
+.x-close {
+    right: 10px;
     display: none;
+    
 }
+
+.burger {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    
+}
+

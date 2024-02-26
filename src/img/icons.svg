@@ -110,7 +110,7 @@
     </defs>
   </symbol>
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" id="x-close">
-    <path d="M21 7L7 21M7 7L21 21" stroke="#111111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M21 7L7 21M7 7L21 21"  stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
   </symbol>
   <symbol fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" id="burger-menu">
     <path d="M19.8333 11.6667H3.5"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
