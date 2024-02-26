@@ -11,7 +11,8 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   
   <script type="module" crossorigin src="/Book_Shelf/commonHelpers.js"></script>
-  <link rel="stylesheet" href="/Book_Shelf/assets/index-78518e07.css">
+  <link rel="modulepreload" crossorigin href="/Book_Shelf/assets/vendor-0cb09735.js">
+  <link rel="stylesheet" href="/Book_Shelf/assets/index-ef53da61.css">
 </head>
 
 <body>
@@ -54,7 +55,16 @@
   <main>
 
     <aside class="sidebar">
-      
+      <div class="category">
+    <ul class="category-list">
+        <li class="category-item">
+            <button class="category-btn active" type="button" data-list-name="bestsellers">
+                All categories
+            </button>
+        </li>
+        <!-- Created item from js... -->
+    </ul>
+</div>
       
     </aside>
 
