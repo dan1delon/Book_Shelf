@@ -74,7 +74,7 @@ h1 {
   margin: 0;
   display: flex;
   flex-direction: column; /* Display items vertically */
-  align-items: flex-start; /* Center items horizontally */
+  /* align-items: flex-start; Center items horizontally
   padding: 20px;
 }
 
@@ -87,4 +87,4 @@ h1 {
   height: 38px;
   border-radius: 50%;
   filter: brightness(0) invert(1);
-} */
+} */ 
