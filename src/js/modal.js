@@ -4,6 +4,7 @@ const refs = {
   xBtn: document.querySelector('.x-btn'),
   modalBtn: document.querySelector('.add-to-localSt'),
   backdrop: document.querySelector('.modal-backdrop'),
+  oneBook: document.querySelector('.books-item'),
 };
 
 refs.books.addEventListener('click', openModal);
