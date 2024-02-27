@@ -1,8 +1,7 @@
-import { getTopBooks } from "./fetchAPI";
+import { getTopBooks } from './fetchAPI';
 
 async function fetchAndDisplayBooks() {
   try {
-
     const data = await getTopBooks();
 
     const booksListContainer = document.querySelector('.books-list');

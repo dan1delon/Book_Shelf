@@ -221,9 +221,12 @@
         flex-wrap: wrap;
         gap: 40px 25px;
     }
+
     .books-item {
         max-width: 218px;
+        width: calc((100% - 50px) / 3);   
     }
+
     .books-bestsellers-list {
         display: flex;
         width: 704px;
@@ -238,7 +241,6 @@
 }
 .books-bestsellers-item {
     width: 218px;
-
 }
 .books-bestsellers-btn {
     margin-left: auto;
@@ -274,7 +276,8 @@
     }
 
     .books-item {
-        max-width: 180px;
+    width: calc((100% - 96px) / 5);
+
     }
     
     .books-bestsellers-list {
