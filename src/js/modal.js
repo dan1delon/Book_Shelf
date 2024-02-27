@@ -4,13 +4,16 @@ const refs = {
   xBtn: document.querySelector('.x-btn'),
   modalBtn: document.querySelector('.add-to-localSt'),
   backdrop: document.querySelector('.modal-backdrop'),
-  oneBook: document.querySelector('.books-item'),
+  oneBook: document.querySelectorAll('.books-item'),
 };
 
 refs.books.addEventListener('click', openModal);
 
 async function openModal(e) {
   e.preventDefault();
+
+  const bookId = e.target.dataset.id;
+  console.log(bookId);
 
   if (e.target.nodeName !== 'IMG') {
      return
@@ -51,11 +54,15 @@ function handleBackdropClick(e) {
 }
 
 function addToLocalStorage() {
+
   const key = 'shopping-list-books'
     
    localStorage.setItem(key, JSON.stringify(Math.random()));
 }
 
+function renderBookById() {
+  
+}
 
 
 
