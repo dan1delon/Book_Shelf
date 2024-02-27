@@ -1,6 +1,10 @@
-body {
+.body-class {
   margin: 0;
-  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'YourFontFamily';
+  src: url('../fonts/DMSans-Regular.woff2') format('woff2'),
+    url('../fonts/DMSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
   background: #000000;
 }
 
@@ -33,6 +37,9 @@ h1 {
   margin-left: 10px;
 }
 
+.svg-container {
+  margin-left: 10px;
+}
 
 .slider-button {
   width: 38px;
@@ -44,6 +51,14 @@ h1 {
   position: absolute;
   top: 10%;
   left: 45%;
+  background-color: #fff;
+}
+
+.slider-button:hover {
+  background-color: #ccc;
+}
+
+.slider-button:active {
   background-color: #fff;
 }
 
@@ -73,8 +88,8 @@ h1 {
   padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: column; /* Display items vertically */
-  align-items: flex-start; /* Center items horizontally */
+  flex-direction: column;
+  align-items: flex-start;
   padding: 20px;
 }
 
