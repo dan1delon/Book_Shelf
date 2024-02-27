@@ -12,7 +12,7 @@
   
   <script type="module" crossorigin src="/Book_Shelf/commonHelpers.js"></script>
   <link rel="modulepreload" crossorigin href="/Book_Shelf/assets/vendor-0cb09735.js">
-  <link rel="stylesheet" href="/Book_Shelf/assets/index-cfa3be88.css">
+  <link rel="stylesheet" href="/Book_Shelf/assets/index-db17c30a.css">
 </head>
 
 <body>
@@ -117,6 +117,7 @@
           fill="#4F2EE8" />
       </svg>
     </button>
+
   </div>
 </div> -->
       </aside>
@@ -134,7 +135,26 @@
   
 
   <div class="modal-backdrop">
-    
+    <div class="backdrop " data-modal>
+    <div class="modal">
+        <div class="div-close-modal">
+            <button class="btn-close-modal" data-modal-close>
+                <svg class="svg-close" width="24" height="24">
+                    <use href="../img/icons.svg#x-close" class="use-close"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="img-and-description">
+        </div>
+        <div class="div-btn-modal">
+            <button class="btn-modal btn-modal-add-js is-hidden" type="submit">Add to shopping list</button>
+        </div>
+        <p class="under-modal-btn-text visually-hidden">
+            Сongratulations! You have added the book to the shopping list.
+            To delete, press the button “Remove from the shopping list”.
+        </p>
+    </div>
+</div>
   </div>
 
   
