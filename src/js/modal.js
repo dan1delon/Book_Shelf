@@ -7,7 +7,6 @@ const refs = {
 };
 
 refs.books.addEventListener('click', openModal);
-refs.modalBtn.addEventListener('click', addToLocalStorage);
 
 async function openModal(e) {
   e.preventDefault();
@@ -22,6 +21,7 @@ async function openModal(e) {
   refs.backdrop.addEventListener('click', handleBackdropClick);
   refs.xBtn.addEventListener('click', closeModal);
   window.addEventListener('keydown', onEscKeyPress);
+  refs.modalBtn.addEventListener('click', addToLocalStorage);
 
   // renderBookById(bookId);
 }
@@ -31,6 +31,7 @@ function closeModal(e) {
   refs.backdrop.removeEventListener('click', handleBackdropClick);
   refs.xBtn.removeEventListener('click', closeModal);
   window.removeEventListener('keydown', onEscKeyPress);
+  refs.modalBtn.removeEventListener('click', addToLocalStorage);
 
   document.body.classList.remove('no-scroll');
   refs.modal.classList.remove('is-open');
@@ -49,7 +50,9 @@ function handleBackdropClick(e) {
 }
 
 function addToLocalStorage() {
-  
+  const key = 'shopping-list-books'
+    
+   localStorage.setItem(key, JSON.stringify(Math.random()));
 }
 
 
