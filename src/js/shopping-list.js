@@ -1,5 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
-    function isCartEmpty() {
+function isCartEmpty() {
         const shoppingList = document.getElementById("shopping-list-books-container");
         return shoppingList.children.length === 0; 
     }
@@ -14,12 +13,6 @@ document.addEventListener("DOMContentLoaded", function() {
 }
     updateCartView(); 
 
-});
-
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
   const url = "https://books-backend.p.goit.global/books/top-books";
   const booksList = document.getElementById("shopping-list-books-container");
 
@@ -85,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
     .catch(error => {
       console.error("Сталася помилка:", error);
     });
-});
+
 
 
 function removeFromShoppingList(bookId) {

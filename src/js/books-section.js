@@ -67,7 +67,7 @@ async function fetchAndDisplayBooks() {
   }
 }
 
-window.addEventListener('resize', fetchAndDisplayBooks);
+// window.addEventListener('resize', fetchAndDisplayBooks);
 
 async function displayCategoryBooks(categoryName) {
   try {
