@@ -1,10 +1,80 @@
-// const refs = {
-//   openModalBtn: document.querySelector('.bestsellers-area'),
-//   openModal: document.querySelector('.category_books_container'),
-//   closeModalBtn: document.querySelector('[data-modal-close]'),
-//   modal: document.querySelector('[data-modal]'),
-//   modalContainer: document.querySelector('.modal'),
-// };
+const refs = {
+  books: document.querySelector('.books-section'),
+  modal: document.querySelector('.modal-backdrop'),
+  xBtn: document.querySelector('.x-btn'),
+};
+
+refs.books.addEventListener('click', openModal);
+refs.xBtn.addEventListener('click', closeModal);
+
+async function openModal(e) {
+
+  if (e.target.nodeName !== 'IMG') {
+     return
+  }
+  
+  refs.modal.classList.add('is-open');
+
+}
+ 
+function closeModal() {
+  refs.modal.classList.remove('is-open');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // refs.openModalBtn.addEventListener('click', toggleModalOpen);
 // refs.closeModalBtn.addEventListener('click', toggleModal);
