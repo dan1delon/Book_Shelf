@@ -17,6 +17,12 @@
     pointer-events: auto;
 }
 
+.no-scroll {
+    overflow-y: hidden;
+    position: fixed;
+    width: 100%;
+}
+
 .modal {
     position: absolute;
     top: 50%;
@@ -116,12 +122,13 @@
 .amazon-link-img {
     width: 62px;
     height: 19px;
+    filter: grayscale(100%);
     mix-blend-mode: luminosity;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .amazon-link-img:hover {
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, .35))
 }
 
 .apple-link {}
@@ -130,11 +137,12 @@
     width: 33px;
     height: 32px;
     mix-blend-mode: luminosity;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    filter: grayscale(100%);
+    transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .apple-link-img:hover{
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, .35))
 }
 
 .add-to-localSt{
