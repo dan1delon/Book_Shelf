@@ -29,7 +29,7 @@ import{a as f}from"./assets/vendor-0cb09735.js";(function(){const t=document.cre
                 data-list-name="${t}">
                 See more
             </button>
-        </li>`}function B(e){const{_id:t,book_image:o,book_image_width:c,book_image_height:n,publisher:s,title:i}=e;return`<li class="books-item" data-id="${t}">
+        </li>`}function B(e){const{_id:t,book_image:o,book_image_width:c,book_image_height:n,publisher:s,title:i}=e;return`<li class="books-item">
         <div class="books-overley-box">
             <img
                 class="books-image"
@@ -37,6 +37,7 @@ import{a as f}from"./assets/vendor-0cb09735.js";(function(){const t=document.cre
                     width="${c}" 
                     height="${n}"
                     loading="lazy"
+                    data-id="${t}"
                 />
             <div class="books-overley">quick view</div>
         </div>
