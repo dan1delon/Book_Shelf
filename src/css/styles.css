@@ -9,6 +9,7 @@
 @import url('./visually-hidden.css');
 @import url('./scroll-up.css');
 @import url('./loader.css');
+@import url('./loading.bar.css');
 
 @font-face {
     font-family: DM-Sans;
