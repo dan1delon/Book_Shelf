@@ -21,19 +21,23 @@ window.addEventListener('load', () => {
 });
 
 // Запуск шкалы при нажатии кнопки
-const Button = document.querySelectorAll('button');
-    Button.addEventListener('click', () => {
-  showLoadingBar();
-  let progress = 0;
-  const interval = setInterval(() => {
-    progress += 10;
-    updateProgressBar(progress);
-    if (progress === 100) {
-      clearInterval(interval);
-      hideLoadingBar();
-    }
-  }, 100);
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    showLoadingBar();
+    let progress = 0;
+    const interval = setInterval(() => {
+      progress += 10;
+      updateProgressBar(progress);
+      if (progress === 100) {
+        clearInterval(interval);
+        hideLoadingBar();
+      }
+    }, 100);
+  });
 });
+
 
 // Запуск шкалы при переходе по внутренним ссылкам
 document.body.addEventListener('click', (e) => {
