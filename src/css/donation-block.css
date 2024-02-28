@@ -1,14 +1,17 @@
-.body-class {
+ /* .body-class {
   margin: 0;
   font-family: 'YourFontFamily';
   src: url('../fonts/DMSans-Regular.woff2') format('woff2'),
     url('../fonts/DMSans-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-  background: #000000;
-}
+   background: #000000; 
+} 
 
-.container {
+
+
+
+ .all_the_stuff {
   position: relative;
   width: 356px;
   height: 474px;
@@ -20,9 +23,10 @@
     rgb(79, 46, 232) 18.02733987569809%,
     rgb(255, 255, 255) 100%
   );
-}
+} 
+  
 
-h1 {
+.support {
   font-family: 'YourFontFamily', sans-serif;
   font-weight: 700;
   font-size: 24px;
@@ -51,17 +55,9 @@ h1 {
   top: 10%;
   left: 45%;
   background-color: #fff;
-}
+} 
 
-.slider-button:hover {
-  background-color: #ccc;
-}
-
-.slider-button:active {
-  background-color: #fff;
-}
-
-.swiper-container {
+ .swiper-container {
   width: 100%;
   height: 100%;
 }
@@ -101,4 +97,5 @@ h1 {
   height: 38px;
   border-radius: 50%;
   filter: brightness(0) invert(1);
-}
+
+} */
