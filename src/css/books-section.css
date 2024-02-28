@@ -6,15 +6,15 @@
   --white: #fff;
 }
 
-.books-section {
+/* .books-section {
   padding: 0 20px;
-}
+} */
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .books-section {
     padding: 0 32px;
   }
-}
+} */
 
 @media screen and (min-width: 1440px) {
   .books-section {

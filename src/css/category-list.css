@@ -52,9 +52,9 @@
         color: #4F2EE8;
     }
 }
-.books-section {
+/* .books-section {
     padding: 0 20px;
-}
+} */
 
 .books-bestsellers {
     display: flex;
@@ -202,9 +202,9 @@
             height: 167px;
         }
     }
-    .books-section {
+    /* .books-section {
         padding: 0 32px;
-    }
+    } */
     .books-title {
         font-size: 48px;
         line-height: 1.08;
