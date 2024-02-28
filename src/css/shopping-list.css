@@ -179,6 +179,11 @@ width: 100%;
         margin-left: 35px;  
 }
 
+/* .donations-container {
+    display: none;
+    opacity: 0;
+} */
+
 @media (min-device-pixel-ratio: 2),
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
@@ -211,7 +216,7 @@ width: 100%;
         .container-shop {
             width: 100%;
             max-width: 768px;
-            padding: 40px 209px 0 32px;
+            /* padding: 40px 209px 0 32px; */
         }
 
 .text-cart {
@@ -299,6 +304,11 @@ overflow: visible;
 
 @media screen and (min-width: 1440px) {
 
+    /* .donations-container {
+            display: block;
+            opacity: 1;
+        } */
+
     .content-cart {
         background-image: url(../img/shoplist-1x-pc.png);
         background-size: 322px 241px;
@@ -320,7 +330,7 @@ overflow: visible;
 .container-shop {
     width: 100%;
     max-width: 1440px;
-    padding: 40px 209px 0 32px;
+    /* padding: 40px 209px 0 32px; */
 }
 
 .text-cart {
