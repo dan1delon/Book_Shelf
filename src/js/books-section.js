@@ -34,6 +34,7 @@ async function fetchAndDisplayBooks() {
       randomBooks.map(book => {
         const bookItem = document.createElement('li');
         bookItem.classList.add('book-item');
+        bookItem.setAttribute('id', book._id);
 
         const bookInfo = `
           <div class="book-info">
@@ -99,6 +100,7 @@ async function displayCategoryBooks(categoryName) {
     data.map(book => {
       const bookItem = document.createElement('div');
       bookItem.classList.add('book-item');
+      bookItem.setAttribute('id', book._id);
 
       const bookInfo = `
         <div class="book-info book-in-category">
