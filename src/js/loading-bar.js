@@ -21,7 +21,7 @@ window.addEventListener('load', () => {
 });
 
 // Запуск шкалы при нажатии кнопки
-const Button = document.getElementById('button');
+const Button = document.querySelectorAll('button');
     Button.addEventListener('click', () => {
   showLoadingBar();
   let progress = 0;
