@@ -32,7 +32,7 @@
         height: 142px;
   }
 
-  .book-title {
+  h2.book-title {
 
     font-weight: 700;
         font-size: 16px;
@@ -75,7 +75,7 @@
           
 }
 
-.book-author {
+p.book-author {
         font-style: italic;
         font-weight: 400;
         font-size: 12px;
@@ -254,7 +254,7 @@ overflow: visible;
 
 }
 
-.book-author {
+p.book-author {
     position: absolute;
     bottom: 24px;
     overflow: visible;
@@ -360,7 +360,7 @@ overflow: visible;
     padding-top: 14px;
 }
 
-.book-author {
+p.book-author {
     position: absolute;
     bottom: 24px;
     overflow: visible;
