@@ -84,3 +84,38 @@ h1 {
   filter: brightness(0) invert(1);
 
 } */ 
+
+.donations-container{
+  border-radius: 16px;
+  width: 335px;
+  height: 460px;
+  box-shadow: 0 10px 10px 0 rgba(245, 245, 247, 0.1);
+  background: radial-gradient(189.32% 190.93% at 59.76% -23.42%, rgb(79, 46, 232) 18.02733987569809%, rgb(255, 255, 255) 100%);
+  padding: 24px 40px 72px;
+  margin-bottom: 40px;
+}
+
+.donations-header{
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.09;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .donations-container{
+    border-radius: 16px;
+    width: 335px;
+    height: 474px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .donations-container{
+    width: 356px;
+    height: 474px;
+  }
+}
