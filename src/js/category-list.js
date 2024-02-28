@@ -103,7 +103,7 @@ function createCard(book) {
     title,
   } = book;
 
-  return `<li class="books-item" data-id="${_id}">
+  return `<li class="books-item">
         <div class="books-overley-box">
             <img
                 class="books-image"
@@ -111,6 +111,7 @@ function createCard(book) {
                     width="${book_image_width}" 
                     height="${book_image_height}"
                     loading="lazy"
+                    data-id="${_id}"
                 />
             <div class="books-overley">quick view</div>
         </div>
