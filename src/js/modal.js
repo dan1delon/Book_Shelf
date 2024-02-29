@@ -12,7 +12,8 @@ const refs = {
 
 refs.books.addEventListener('click', openModal);
 
-let currentBook = [];
+let currentBook = null;
+let modalBtn = null;
 
 async function openModal(e) {
   e.preventDefault();
@@ -32,7 +33,7 @@ async function openModal(e) {
 
   await renderBookById(bookId);
 
-  const modalBtn = document.querySelector('.add-to-localSt')
+  modalBtn = document.querySelector('.add-to-localSt')
   modalBtn.addEventListener('click', addToLocalStorage);
 }
  
@@ -41,7 +42,7 @@ function closeModal(e) {
   refs.backdrop.removeEventListener('click', handleBackdropClick);
   refs.xBtn.removeEventListener('click', closeModal);
   window.removeEventListener('keydown', onEscKeyPress);
-  // refs.modalBtn.removeEventListener('click', addToLocalStorage);
+  modalBtn.removeEventListener('click', addToLocalStorage);
 
   document.body.classList.remove('no-scroll');
   refs.modal.classList.remove('is-open');
@@ -60,21 +61,18 @@ function handleBackdropClick(e) {
 }
 
 function addToLocalStorage() {
-
-  // const key = 'selected-books';
-  // localStorage.setItem(key, JSON.stringify(currentBook));
   
   const key = 'selected-books';
   const savedBooks = JSON.parse(localStorage.getItem(key)) || [];
 
-  const bookId = currentBook[0]._id;
+  const bookId = currentBook._id;
   const isBookSaved = savedBooks.some(book => book._id === bookId);
 
   if (isBookSaved) {
     const updatedBooks = savedBooks.filter(book => book._id !== bookId);
     localStorage.setItem(key, JSON.stringify(updatedBooks));
   } else {
-    savedBooks.push(currentBook[0]);
+    savedBooks.push(currentBook);
     localStorage.setItem(key, JSON.stringify(savedBooks));
   }
 
@@ -98,7 +96,7 @@ async function renderBookById(bookId) {
   try {
     const data = await getBookById(bookId);
     const { book_image, title, author, description, buy_links } = data;
-    currentBook.push(data);
+    currentBook = data;
 
     // if (description === '') {
     //   refs.descriptionBookEl.textContent = 'there is no description of this book';

@@ -15,6 +15,16 @@
   padding: 0 20px;
   max-width: 375px;
 }
+ 
+@media screen and (min-width: 768px) {
+  .books-section {
+      padding: 0;
+    }
+}
+
+/* .books-section {
+  padding: 0 20px;
+} */
 
 @media screen and (min-width: 768px) {
   .books-section {
@@ -26,6 +36,10 @@
 
   .books-section {
     max-width: 996px;
+/* <<<<<<< Edits/AllCategories */
+    padding-left: 40px;
+    margin-left: 0;
+/* >>>>>>> main */
   }
 }
 
@@ -292,6 +306,7 @@ span.book-author {
   color: var(--white);
   background-color: var(--violet);
 }
+
 
 
 
