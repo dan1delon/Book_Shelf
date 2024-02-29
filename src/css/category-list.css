@@ -1,4 +1,4 @@
-aside {
+/* aside {
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -6,7 +6,7 @@ aside {
     max-width: 375px;
     padding: 0 20px;
 
-}
+} */
 
 .category {
     margin-bottom: 40px;
@@ -193,12 +193,12 @@ aside {
 
 
 @media (min-width: 768px) {
-        aside {
+        /* aside {
         flex-direction: row;
         margin-bottom: 100px;
         gap: 32px;
         justify-content: center;
-    }
+    } */
     .category {
         margin-bottom: 0;
         font-size: 18px;
@@ -265,11 +265,11 @@ aside {
 
 @media (min-width: 1440px) {
 
-    aside {
+    /* aside {
         flex-direction: column;
         justify-content: flex-start;
         gap: 86px;
-    }
+    } */
 
     .category {
         width: 356px;
