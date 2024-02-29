@@ -19,21 +19,20 @@ margin: 0 auto;
   
 }
 
-/* .books-section {
+.books-section {
   padding: 0 20px;
-} */
+}
 
-/* @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .books-section {
     margin: 0 auto;
     max-width: 704px;
   }
-} */
+}
 
 @media screen and (min-width: 1440px) {
 
   .books-section {
-
     max-width: 996px;
 /*  padding-left: 40px;
     width: 996px; */
@@ -299,6 +298,7 @@ span.book-author {
   color: var(--white);
   background-color: var(--violet);
 }
+
 
 
 
