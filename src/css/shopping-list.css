@@ -1,5 +1,4 @@
-
-  
+ 
   .book-card {
     border: 2px solid rgba(79, 46, 232, 0.4);
         border-radius: 16px;
@@ -28,9 +27,9 @@
 
   .book-cover {
       max-width: 100%;
-    border-radius: 8px;
-        width: 100px;
-        height: 142px;
+      border-radius: 8px;
+      width: 100px;
+      height: 142px;
   }
 
   h2.book-title {
@@ -185,6 +184,7 @@ right: 14px;
 
 .container-main-shopping {
     display: flex;
+    margin: 0 auto;
 }
 
 .main-content {
@@ -209,13 +209,13 @@ right: 14px;
     display: none;
 }
 
-.main-content {
-    width: 335px;
-    margin: 0 auto;
+.container-main-shopping .sidebar {
+    display: none;
 }
 
 .container-main-shopping {
-    width: 335px;
+    width: 375px;
+    margin: 0 auto;
 }
 }
 
@@ -223,7 +223,8 @@ right: 14px;
 
     .container-main-shopping {
             display: flex;
-            margin: o auto;
+            margin: 0 auto;
+            width: 768px;
         }
 .donations-container {
         display: block;
@@ -337,9 +338,17 @@ p.book-author {
 
 @media screen and (min-width: 1440px) {
 
+    .container-main-shopping .sidebar {
+            display: block;
+        }
+
 .container-main-shopping .donations-container {
         display: block;
     }
+
+        .container-main-shopping {
+            width: 1440px;
+        }
 
     .content-cart {
         background-image: url(../img/shoplist-1x-pc.png);
@@ -442,4 +451,16 @@ p.book-author {
     bottom: 10px;
 }
 
+}
+
+@media screen and (min-width: 375px) {
+    .container-main-shopping .sidebar {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container-main-shopping .sidebar {
+        display: block;
+    }
 }
