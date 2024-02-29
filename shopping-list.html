@@ -5,20 +5,19 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/Book_Shelf/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book shelf</title>
+  <title>Shopping List</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.css"
     integrity="sha512-gA2Bvu0/hw4oj0Lp8ZHjK+o3S4BE5m8d/wNVy6ktKLhHKPpWLQwv9ixzuWirWOakoJqlBdePq2NhoCaUOQ5npQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   
-  <script type="module" crossorigin src="/Book_Shelf/commonHelpers.js"></script>
+  <script type="module" crossorigin src="/Book_Shelf/commonHelpers2.js"></script>
   <link rel="modulepreload" crossorigin href="/Book_Shelf/assets/vendor-3d873957.js">
   <link rel="modulepreload" crossorigin href="/Book_Shelf/assets/icons-864331c8.js">
-  <link rel="stylesheet" href="/Book_Shelf/assets/icons-37b451f3.css">
   <link rel="stylesheet" href="/Book_Shelf/assets/vendor-6c527891.css">
+  <link rel="stylesheet" href="/Book_Shelf/assets/icons-37b451f3.css">
 </head>
 
 <body>
-
   <header class="header">
   <div class="name-header">
     <a class="header-logo" href="/">
@@ -73,24 +72,10 @@
     <use href="../img/icons.svg#icon-scroll"></use>
   </svg>
 </button>
-  <div id="loading-bar">
-    <div class="progress-bar"></div>
-</div>
 
-  <main class="main">
-
-    <div class="container-main">
-      <aside class="sidebar">
-        <div class="category">
-    <ul class="category-list">
-        <li class="category-item">
-            <button class="category-btn active" type="button" data-list-name="bestsellers">
-                All categories
-            </button>
-        </li>
-        <!-- Created item from js... -->
-    </ul>
-</div>
+  <main class="main-content-shopping">
+    <div class="container-main-shopping">
+      <aside class="sidebar" id="donation-block" style="display: none;">
         <div class="donations-container">
   <div class="logo-and-herb">
     <h1 class="donations-header">Support Ukraine</h1>
@@ -110,97 +95,25 @@
 </div>
       </aside>
 
-      <section class="books-section">
-  <h1 class="books-section-title">
-    Best sellers <span class="books-section-title-accent">books</span>
-  </h1>
-  <ul class="books-list"></ul>
-</section>
+      <section class="main-content">
+        <div class="container-shop" id="cart">
+          <h1 class="title-shoplist">
+            Shopping <span class="shop-span">List</span>
+          </h1>
+          <div class="content-cart" id="cart-content" style="display: block">
+            <p class="text-cart">
+              This page is empty, add some books and proceed to order.
+            </p>
+          </div>
+          <div id="shopping-list-books-container"></div>
+        </div>
+      </section>
     </div>
 
   </main>
 
-  <button type="button" class="btn-up"></button>
-
   
-
-  <div class="modal-backdrop">
-    <div class="modal">
-    <button class="x-btn" type="button">
-        <svg class="x-btn-icon" width="24" height="24">
-            <use href="../img/icons.svg#x-close"></use>
-        </svg>
-    </button>
-    <div class="modal-content-wrapper">
-
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="backdrop" data-modal>
-    <div class="modal">
-        <div class="div-close-modal">
-            <button class="btn-close-modal" data-modal-close>
-                <svg class="svg-close" width="24" height="24">
-                    <use href="../img/icons.svg#x-close" class="use-close"></use>
-                </svg>
-            </button>
-        </div>
-        <div class="img-and-description">
-        </div>
-        <div class="div-btn-modal">
-            <button class="btn-modal btn-modal-add-js is-hidden" type="submit">Add to shopping list</button>
-        </div>
-        <p class="under-modal-btn-text visually-hidden">
-            Сongratulations! You have added the book to the shopping list.
-            To delete, press the button “Remove from the shopping list”.
-        </p>
-    </div>
-</div> -->
-  </div>
-
+  
   
 
 </body>
