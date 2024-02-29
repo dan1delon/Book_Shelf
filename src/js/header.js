@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentPage === '/') {
         homeLink.classList.add('button');
         shoppingListLink.classList.remove('button');
-    } else if (currentPage === '/shopping-list.html') {
+    } else if (currentPage === './shopping-list.html') {
         homeLink.classList.remove('button');
         shoppingListLink.classList.add('button');
     }
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentPage === '/') {
         homeLink.classList.add('button');
         shoppingListLink.classList.remove('button');
-    } else if (currentPage === '/shopping-list.html') {
+    } else if (currentPage === './shopping-list.html') {
         homeLink.classList.remove('button');
         shoppingListLink.classList.add('button');
     }
