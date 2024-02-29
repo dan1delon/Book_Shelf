@@ -82,10 +82,14 @@ function isCartEmpty() {
 
 function updateCartView() {
   const cartContent = document.getElementById("cart-content");
+  const donationBlock = document.getElementById("donation-block");
+  
   if (isCartEmpty()) {
     cartContent.style.display = "block";
+    donationBlock.style.display = "none"; // Скрыть блок пожертвований
   } else {
     cartContent.style.display = "none";
+    donationBlock.style.display = "block"; // Показать блок пожертвований
   }
 }
 

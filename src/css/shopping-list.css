@@ -1,4 +1,5 @@
 
+  
   .book-card {
     border: 2px solid rgba(79, 46, 232, 0.4);
         border-radius: 16px;
@@ -181,8 +182,17 @@ right: 14px;
 
 .container-main-shopping {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    /* выравнивание элементов по верхнему краю */
+}
+
+.main-content {
+    flex-grow: 1;
+    /* устанавливаем ширину, чтобы основное содержимое занимало оставшееся пространство */
+}
+
+#donation-block {
+    margin: 40px 24px;
 }
 
 @media (min-device-pixel-ratio: 2),
@@ -194,8 +204,16 @@ right: 14px;
 }
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 375px) {
+.container-main-shopping .donations-container {
+    display: none;
+}
+}
 
+@media screen and (min-width: 768px) {
+.donations-container {
+        display: block;
+    }
     .content-cart {
         background-image: url(../img/shoplist-1x-tablet.png);
         background-size: 322px 241px;
@@ -305,6 +323,10 @@ p.book-author {
 
 @media screen and (min-width: 1440px) {
 
+.container-main-shopping .donations-container {
+        display: block;
+    }
+
     .content-cart {
         background-image: url(../img/shoplist-1x-pc.png);
         background-size: 322px 241px;
@@ -405,6 +427,7 @@ p.book-author {
     right: 24px;
     bottom: 10px;
 }
+
 
 
 }
