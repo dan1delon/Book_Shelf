@@ -6,6 +6,7 @@
   background: radial-gradient(189.32% 190.93% at 59.76% -23.42%, rgb(79, 46, 232) 18.02733987569809%, rgb(255, 255, 255) 100%);
   padding: 24px 40px;
   margin-bottom: 40px;
+  display: block;
 }
 
 .donations-header{
@@ -62,6 +63,7 @@
     width: 335px;
     height: 474px;
     margin-bottom: 0;
+    display: block;
   }
 
   .scroll-button-donations {

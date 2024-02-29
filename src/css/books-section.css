@@ -22,10 +22,6 @@
     }
 }
 
-/* .books-section {
-  padding: 0 20px;
-} */
-
 @media screen and (min-width: 768px) {
   .books-section {
     max-width: 704px;
@@ -36,10 +32,7 @@
 
   .books-section {
     max-width: 996px;
-/* <<<<<<< Edits/AllCategories */
-    padding-left: 40px;
     margin-left: 0;
-/* >>>>>>> main */
   }
 }
 

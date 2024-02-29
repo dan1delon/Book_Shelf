@@ -140,7 +140,7 @@ right: 14px;
 }
 
 .container-shop {
-width: 100%;
+    width: 100%;
     max-width: 375px;
     padding: 40px 55px 0 20px;   
 }
@@ -179,10 +179,11 @@ width: 100%;
         margin-left: 35px;  
 }
 
-/* .donations-container {
-    display: none;
-    opacity: 0;
-} */
+.container-main-shopping {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 @media (min-device-pixel-ratio: 2),
 (min-resolution: 192dpi),
@@ -195,7 +196,7 @@ width: 100%;
 
 @media screen and (min-width: 768px) {
 
-.content-cart {
+    .content-cart {
         background-image: url(../img/shoplist-1x-tablet.png);
         background-size: 322px 241px;
         background-repeat: no-repeat;
@@ -303,11 +304,6 @@ p.book-author {
 
 
 @media screen and (min-width: 1440px) {
-
-    /* .donations-container {
-            display: block;
-            opacity: 1;
-        } */
 
     .content-cart {
         background-image: url(../img/shoplist-1x-pc.png);
