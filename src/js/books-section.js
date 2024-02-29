@@ -34,6 +34,7 @@ export async function fetchAndDisplayBooks() {
       randomBooks.map(book => {
         const bookItem = document.createElement('li');
         bookItem.classList.add('book-item');
+        bookItem.setAttribute('id', book._id);
 
         const bookInfo = `
             <div class = "book-overley-box"><img src="${book.book_image}" alt="${book.title}" class="book-image" data-id="${book.book_id}"><div class = "book-overley">quick view</div></div>
@@ -65,7 +66,9 @@ export async function fetchAndDisplayBooks() {
   }
 }
 
+
 async function displayCategoryBooks(selectedCategory) {
+
   try {
     const response = await getBooksFromCategory(selectedCategory);
 
@@ -92,6 +95,7 @@ async function displayCategoryBooks(selectedCategory) {
     response.map(book => {
       const bookItem = document.createElement('div');
       bookItem.classList.add('book-item');
+      bookItem.setAttribute('id', book._id);
 
       const bookInfo = `
         <div class="book-info book-in-category">
