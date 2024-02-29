@@ -10,11 +10,12 @@
 .books-section {
   display: flex;
   flex-direction: column;
-margin: 0 auto;
+  margin: 0 auto;
   gap: 40px;
+  padding: 0 20px;
   max-width: 375px;
- 
 }
+ 
 @media screen and (min-width: 768px) {
   .books-section {
       padding: 0;
@@ -27,7 +28,6 @@ margin: 0 auto;
 
 @media screen and (min-width: 768px) {
   .books-section {
-    margin: 0 auto;
     max-width: 704px;
   }
 }
@@ -36,8 +36,10 @@ margin: 0 auto;
 
   .books-section {
     max-width: 996px;
+/* <<<<<<< Edits/AllCategories */
     padding-left: 40px;
     margin-left: 0;
+/* >>>>>>> main */
   }
 }
 
@@ -49,10 +51,11 @@ margin: 0 auto;
   line-height: 1.19em;
   letter-spacing: -0.04em;
   color: var(--black);
-  /* margin-bottom: 40px; */
+
 }
 
 @media screen and (min-width: 768px) {
+
   .books-section-title {
     font-size: 48px;
     line-height: 1.08em;
@@ -110,6 +113,9 @@ margin: 0 auto;
     justify-content: flex-start;
     margin-bottom: 20px;
   }
+}
+.book-item {
+cursor: pointer;
 }
 
 .book-item:not(:first-child) {

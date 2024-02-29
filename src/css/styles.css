@@ -76,7 +76,16 @@ body {
 
 
 @media screen and (min-width: 768px) {
-    .container-main {
+
+/*     .container-main {
+        display: flex;
+        padding: 40px 32px 100px;
+        flex-direction: column;
+        gap: 100px;
+      } */
+/*  ==================================  */
+ 
+/*     .container-main {
         width: 704px;
         padding: 40px 0 100px;
     }
@@ -91,6 +100,14 @@ body {
 @media screen and (min-width: 1440px) {
 
     .container-main {
+        padding: 40px 32px 100px;
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+     .container-main {
+     }
+
         width: 1440px;
         padding: 40px 24px 72px;
         margin: 0 auto;
@@ -107,4 +124,4 @@ body {
         gap: 0px;
     }
 
-}
+} */

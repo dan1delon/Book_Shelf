@@ -71,7 +71,7 @@ async function categoryBooks(selectedCategory) {
 
 fetchAndDisplayBooks();
 
-function booksMarkup(books, name) {
+export function booksMarkup(books, name) {
   const title = styleTitle(name);
 
   const markup = `${title}
