@@ -1,6 +1,6 @@
 import { getTopBooks, getBooksFromCategory } from './fetchAPI';
 import { booksMarkup } from './category-list';
-
+const booksSectionTitle = document.querySelector('.books-section-title');
 export async function fetchAndDisplayBooks() {
   try {
     const data = await getTopBooks();
@@ -54,7 +54,7 @@ export async function fetchAndDisplayBooks() {
       seeMoreButton.classList.add('see-more-button');
       seeMoreButton.textContent = 'See more';
       seeMoreButton.addEventListener('click', () => {
-        displayCategoryBooks(category.list_name);
+        displayCategoryBooks(selectedCategory);
       });
       seeMoreButtonContainer.appendChild(seeMoreButton);
       categoryElement.appendChild(seeMoreButtonContainer);
@@ -65,6 +65,7 @@ export async function fetchAndDisplayBooks() {
     console.error('Error fetching books:', error);
   }
 }
+
 async function displayCategoryBooks(selectedCategory) {
   try {
     const response = await getBooksFromCategory(selectedCategory);
@@ -72,9 +73,6 @@ async function displayCategoryBooks(selectedCategory) {
     const booksListContainer = document.querySelector('.books-list');
     const content = booksMarkup(response, selectedCategory);
     booksListContainer.innerHTML = content;
-
-    const booksSectionTitle = document.querySelector('.books-section-title');
-    booksSectionTitle.remove();
 
     // const categoryTitle = document.createElement('h1');
     // const words = selectedCategory.split(' ');
@@ -87,27 +85,27 @@ async function displayCategoryBooks(selectedCategory) {
     // categoryTitle.classList.add('books-section-title');
     // booksListContainer.appendChild(categoryTitle);
 
-    const booksContainer = document.createElement('div');
-    booksContainer.classList.add('books-container');
+    // const booksContainer = document.createElement('div');
+    // booksContainer.classList.add('books-container');
 
-    response.map(book => {
-      const bookItem = document.createElement('div');
-      bookItem.classList.add('book-item');
-      bookItem.setAttribute('id', book._id);
+    // response.map(book => {
+    //   const bookItem = document.createElement('div');
+    //   bookItem.classList.add('book-item');
+    //   bookItem.setAttribute('id', book._id);
 
-      const bookInfo = `
-        <div class="book-info book-in-category">
-          <img src="${book.book_image}" alt="${book.title}" class="book-image">
-          <h3 class="book-title">${book.title}</h3>
-          <p class="book-author">${book.author}</p>
-        </div>
-      `;
-      bookItem.innerHTML = bookInfo;
+    //   const bookInfo = `
+    //     <div class="book-info book-in-category">
+    //       <img src="${book.book_image}" alt="${book.title}" class="book-image">
+    //       <h3 class="book-title">${book.title}</h3>
+    //       <p class="book-author">${book.author}</p>
+    //     </div>
+    //   `;
+    //   bookItem.innerHTML = bookInfo;
 
-      booksContainer.appendChild(bookItem);
-    });
+    //   booksContainer.appendChild(bookItem);
+    // });
 
-    booksListContainer.appendChild(booksContainer);
+    // booksListContainer.appendChild(booksContainer);
   } catch (error) {
     console.error('Error fetching books:', error);
   }

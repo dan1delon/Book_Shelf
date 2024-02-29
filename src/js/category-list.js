@@ -57,6 +57,7 @@ function bestsellersMarkup(bestBooks, name) {
 
 async function categoryBooks(selectedCategory) {
   try {
+    bestTitle.style.display = 'none';
     const currentBooks = await getBooksFromCategory(selectedCategory);
     if (currentBooks.length === 0) {
       return;
