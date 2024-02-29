@@ -195,7 +195,6 @@ aside {
 @media (min-width: 768px) {
         aside {
         flex-direction: row;
-        margin-bottom: 100px;
         gap: 32px;
         justify-content: center;
     }

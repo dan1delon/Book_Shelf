@@ -1,4 +1,5 @@
 import { getTopBooks, getBooksFromCategory } from './fetchAPI';
+import { booksMarkup } from './category-list';
 
 export async function fetchAndDisplayBooks() {
   try {
@@ -65,15 +66,13 @@ export async function fetchAndDisplayBooks() {
     console.error('Error fetching books:', error);
   }
 }
-
-
 async function displayCategoryBooks(selectedCategory) {
-
   try {
     const response = await getBooksFromCategory(selectedCategory);
 
     const booksListContainer = document.querySelector('.books-list');
-    booksListContainer.innerHTML = '';
+    const content = booksMarkup(response, selectedCategory);
+    booksListContainer.innerHTML = content;
 
     const booksSectionTitle = document.querySelector('.books-section-title');
     booksSectionTitle.remove();
