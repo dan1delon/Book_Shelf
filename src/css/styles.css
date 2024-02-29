@@ -46,6 +46,8 @@
 body {
     font-family: "DM-Sans", sans-serif;
     color: #111;
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
 }
 
 .sidebar {
@@ -123,4 +125,69 @@ body {
         gap: 0px;
     }
 
+}
+
+:root {
+    --bg-color-light: white;
+    --text-color-light: rgb(17, 17, 17);
+    --bg-color-dark: black;
+    --text-color-dark: white;
+    --hover-color-dark: rgb(234, 198, 69);
+}
+
+/* Добавьте стили для элементов в зависимости от выбранной темы */
+.dark-theme {
+    background-color: rgb(32, 32, 36);
+    color: var(--text-color-dark);
+}
+
+.dark-theme h1,
+.dark-theme h2 {
+    color: white;
+}
+
+
+.dark-theme .category-btn {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.dark-theme .category-btn:focus {
+    color: var(--hover-color-dark);
+}
+
+.dark-theme button.category-btn.active {
+    color: var(--hover-color-dark);
+}
+
+.dark-theme .text-cart {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.dark-theme .books-bestsellers-btn {
+    background-color: rgb(32, 32, 36);
+    color: white;  
+}
+
+
+.dark-theme .books-bestsellers-btn:hover {
+background-color: rgb(79, 46, 232);
+color: white;
+}
+
+.dark-theme .x-btn {
+    fill: white;
+    stroke: white;
+}
+
+.dark-theme .modal {
+    background-color: rgb(32, 32, 36);
+    color: var(--text-color-dark);
+}
+
+.dark-theme button.add-to-localSt {
+    color: white;
+}
+
+.dark-theme .amazon {
+    fill: white;
 }

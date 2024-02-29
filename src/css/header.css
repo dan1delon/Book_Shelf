@@ -35,20 +35,26 @@
     margin-left: 23px;
 }
 
-.dark-mode .icon-logo {
+.dark-theme .icon-logo {
     stroke: white;
 }
 
-.dark-mode .x-close {
+.dark-theme .x-close {
     stroke: white;
 }
 
-.dark-mode .icon-cart {
+.dark-theme .icon-cart {
     stroke: white;
     fill: white;
 }
 
-.dark-mode .header {
+.dark-theme .icon-cart.active {
+stroke: white;
+    fill: white;
+}
+
+
+.dark-theme .header {
     width: 100%;
         height: 64px;
         display: flex;
@@ -139,11 +145,11 @@ input:checked+.slider:before {
     display: inline-block;
     width: 1em;
     height: 1em;
-    stroke: rgb(17, 17, 17);
     width: 20px;
     height: 20px;
     margin-bottom: 2px;
     margin-right: 7px;
+    stroke: black;
 }
 
 .backdrop-icon-cart {
@@ -171,7 +177,7 @@ input:checked+.slider:before {
         align-items: center;
 }
 
-.dark-mode {
+.dark-theme {
     --bg-color: rgb(17, 17, 17);
     /* Цвет фона сайта при включенной темной теме */
     --text-color: white;
@@ -182,35 +188,38 @@ input:checked+.slider:before {
     display: none;
 }
 
-  .backdrop-nav-links {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-  }
+ .backdrop-nav-links {
+     position: absolute;
+     top: 25%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+    text-transform: uppercase;
+    width: 200px;
+ }
 
-  .backdrop-nav-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 8px 16px;
-      border-radius: 36px;
-      background: transparent;
-      color: white;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-      gap: 7px;
-  }
+ .backdrop-nav-link {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 36px;
+     background: transparent;
+     color: white;
+     text-decoration: none;
+     transition: background-color 0.3s ease;
+     gap: 7px;
+     margin-bottom: 17px;
+ }
 
-  .backdrop-nav-link.button {
-      background: rgb(234, 198, 69);
-      color: black;
-  }
-  
+ .backdrop-nav-link.button {
+     background: rgb(234, 198, 69);
+     color: black;
+     font-weight: 700;
+     padding: 8px 12px;
+ }
 
 @media (min-width: 768px) {
     .header {
@@ -280,13 +289,19 @@ input:checked+.slider:before {
     width: 450px;
     height: 439px;
     position: absolute;
-    left: -65px;
-    right: -10px;
-    bottom: -186px;
-    background-image: url('../img/group-6-1.png');
+    bottom: 57px;
+    background-image: url('../img/group-6.png');
     background-size: cover;
     background-position: left bottom;
     background-repeat: no-repeat;
+}
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .background-image {
+        background-image: url(../img/group-6-1.png);
+    }
 }
 
 .icon-logo,
@@ -316,3 +331,16 @@ input:checked+.slider:before {
     
 }
 
+.scrollUpButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(79, 46, 232);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 5px solid rgba(184, 168, 255, 0.969);
+    cursor: pointer;
+    z-index: 100;
+}
