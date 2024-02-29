@@ -1,6 +1,6 @@
-import { getTopBooks } from './fetchAPI';
+import { getTopBooks, getBooksFromCategory } from './fetchAPI';
 
-async function fetchAndDisplayBooks() {
+export async function fetchAndDisplayBooks() {
   try {
     const data = await getTopBooks();
 
@@ -37,11 +37,9 @@ async function fetchAndDisplayBooks() {
         bookItem.setAttribute('id', book._id);
 
         const bookInfo = `
-          <div class="book-info">
-            <img src="${book.book_image}" alt="${book.title}" class="book-image">
-            <h3 class="book-title">${book.title}</h3>
-            <p class="book-author">${book.author}</p>
-          </div>
+            <div class = "book-overley-box"><img src="${book.book_image}" alt="${book.title}" class="book-image" data-id="${book.book_id}"><div class = "book-overley">quick view</div></div>
+            <h4 class="book-title">${book.title}</h4>
+            <span class="book-author">${book.author}</span>
         `;
         bookItem.innerHTML = bookInfo;
 
@@ -68,14 +66,11 @@ async function fetchAndDisplayBooks() {
   }
 }
 
-// window.addEventListener('resize', fetchAndDisplayBooks);
 
-async function displayCategoryBooks(categoryName) {
+async function displayCategoryBooks(selectedCategory) {
+
   try {
-    const response = await fetch(
-      `https://books-backend.p.goit.global/books/category?category=${categoryName}`
-    );
-    const data = await response.json();
+    const response = await getBooksFromCategory(selectedCategory);
 
     const booksListContainer = document.querySelector('.books-list');
     booksListContainer.innerHTML = '';
@@ -97,7 +92,7 @@ async function displayCategoryBooks(categoryName) {
     const booksContainer = document.createElement('div');
     booksContainer.classList.add('books-container');
 
-    data.map(book => {
+    response.map(book => {
       const bookItem = document.createElement('div');
       bookItem.classList.add('book-item');
       bookItem.setAttribute('id', book._id);

@@ -1,6 +1,8 @@
 import { getCategories, getBooksFromCategory, getTopBooks } from './fetchAPI/';
+import { fetchAndDisplayBooks } from './books-section';
 const categoryList = document.querySelector('.category-list');
 const booksContent = document.querySelector('.books-list');
+const bestTitle = document.querySelector('.books-section-title');
 
 async function createItem() {
   try {
@@ -29,6 +31,7 @@ function createMarkup(type) {
 
 async function bestsellersContent() {
   try {
+    bestTitle.style.display = 'none';
     const bestBooks = await getTopBooks();
     if (bestBooks.length === 0) {
       throw new Error();
@@ -66,7 +69,7 @@ async function categoryBooks(selectedCategory) {
   }
 }
 
-bestsellersContent();
+fetchAndDisplayBooks();
 
 function booksMarkup(books, name) {
   const title = styleTitle(name);
@@ -107,8 +110,8 @@ function createCard(book) {
         <div class="books-overley-box">
             <img
                 class="books-image"
-                src="${book_image}" 
-                    width="${book_image_width}" 
+                src="${book_image}"
+                    width="${book_image_width}"
                     height="${book_image_height}"
                     loading="lazy"
                     data-id="${_id}"
