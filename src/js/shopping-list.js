@@ -1,3 +1,6 @@
+import amazon from "../img/icons.svg#icon-amazon";
+import appleBook from "../img/icons.svg#icon-ibooks";
+import trash from "../img/icons.svg#icon-trash";
 
 function renderBooksFromLocalStorage() {
   const key = 'selected-books';
@@ -24,19 +27,19 @@ function renderBooksFromLocalStorage() {
       <div class="buy-book">
           <a href="${book.buy_links[0].url}" target="_blank">
               <svg class="amazon" width="16" height="16">
-                  <use href="../img/icons.svg#icon-amazon"></use>
+                  <use href="${amazon}"></use>
               </svg>
           </a>
           <a href="${book.buy_links[1].url}" target="_blank">
               <svg class="ibook" width="16" height="16">
-                  <use href="../img/icons.svg#icon-ibooks"></use>
+                  <use href="${appleBook}"></use>
               </svg>
           </a>
       </div>
       <button data-book-id="${book._id}" class="btn-delete">
           <div class="icon-trash">
               <svg class="trash" width="16" height="16">
-                  <use href="../img/icons.svg#icon-trash"></use>
+                  <use href="${trash}"></use>
               </svg>
           </div>
       </button>`;

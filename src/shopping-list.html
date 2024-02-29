@@ -9,16 +9,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.css"
     integrity="sha512-gA2Bvu0/hw4oj0Lp8ZHjK+o3S4BE5m8d/wNVy6ktKLhHKPpWLQwv9ixzuWirWOakoJqlBdePq2NhoCaUOQ5npQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
 <body>
-  <load src="./header.html" />
+  <load src="./partials/header.html" />
 
   <main class="main-content-shopping">
     <div class="container-main-shopping">
       <aside class="sidebar" id="donation-block" style="display: none;">
-        <load src="./donation-block.html" />
+        <load src="./partials/donation-block.html" />
       </aside>
 
       <section class="main-content">
@@ -38,13 +38,10 @@
 
   </main>
 
-  <load src="./footer.html" />
+  <script type="module" src="./js/shopping-list.js"></script>
+  <script type="module" src="./js/donation-block.js"></script>
+  <script type="module" src="./js/header.js"></script>
 
-  <script type="module" src="../js/shopping-list.js"></script>
-  <script type="module" src="../js/donation-block.js"></script>
-  <script type="module" src="../js/header.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 
 </html>

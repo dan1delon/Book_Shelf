@@ -1,4 +1,6 @@
 import { getBookById } from "./fetchAPI";
+import amazon from "../img/icons.svg#icon-amazon";
+import appleBook from "../img/apple-shop-1x.png";
 
 const refs = {
   books: document.querySelector('.books-section'),
@@ -116,13 +118,13 @@ async function renderBookById(bookId) {
             <p class="descr-of-book">${description}</p>
             <div class="buy-links">
                 <a href="${buy_links[0].url}" target="_blank" class="amazon-link"> <svg class="amazon" width="16" height="16">
-                  <use href="../img/icons.svg#icon-amazon"></use>
+                  <use href="${amazon}"></use>
               </svg></a>
 
                         
              
           </a>
-                <a href="${buy_links[1].url}" target="_blank" class="apple-link"><img class="apple-link-img" src="../img/apple-shop-1x.png"
+                <a href="${buy_links[1].url}" target="_blank" class="apple-link"><img class="apple-link-img" src="${appleBook}"
                         alt="link"></a>
             </div>
            </div>
