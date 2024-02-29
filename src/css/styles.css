@@ -142,13 +142,16 @@ body {
 }
 
 .dark-theme h1,
-.dark-theme h2 {
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4 {
     color: white;
 }
 
 
 .dark-theme .category-btn {
     color: rgba(255, 255, 255, 0.6);
+    background: rgb(32, 32, 36);
 }
 
 .dark-theme .category-btn:focus {
@@ -163,13 +166,13 @@ body {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.dark-theme .books-bestsellers-btn {
+.dark-theme .see-more-button {
     background-color: rgb(32, 32, 36);
     color: white;  
 }
 
 
-.dark-theme .books-bestsellers-btn:hover {
+.dark-theme .see-more-button:hover {
 background-color: rgb(79, 46, 232);
 color: white;
 }
