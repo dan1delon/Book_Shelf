@@ -35,10 +35,9 @@ export async function fetchAndDisplayBooks() {
       randomBooks.map(book => {
         const bookItem = document.createElement('li');
         bookItem.classList.add('book-item');
-        bookItem.setAttribute('id', book._id);
 
         const bookInfo = `
-            <div class = "book-overley-box"><img src="${book.book_image}" alt="${book.title}" class="book-image" data-id="${book.book_id}"><div class = "book-overley">quick view</div></div>
+            <div class = "book-overley-box"><img src="${book.book_image}" alt="${book.title}" class="book-image" data-id="${book._id}"><div class = "book-overley">quick view</div></div>
             <h4 class="book-title">${book.title}</h4>
             <span class="book-author">${book.author}</span>
         `;
@@ -77,16 +76,16 @@ async function displayCategoryBooks(selectedCategory) {
     const booksSectionTitle = document.querySelector('.books-section-title');
     booksSectionTitle.remove();
 
-    const categoryTitle = document.createElement('h1');
-    const words = categoryName.split(' ');
-    const lastWord = words.pop();
-    categoryTitle.innerHTML =
-      words.join(' ') +
-      ' <span class="books-section-title-accent">' +
-      lastWord +
-      '</span>';
-    categoryTitle.classList.add('books-section-title');
-    booksListContainer.appendChild(categoryTitle);
+    // const categoryTitle = document.createElement('h1');
+    // const words = selectedCategory.split(' ');
+    // const lastWord = words.pop();
+    // categoryTitle.innerHTML =
+    //   words.join(' ') +
+    //   ' <span class="books-section-title-accent">' +
+    //   lastWord +
+    //   '</span>';
+    // categoryTitle.classList.add('books-section-title');
+    // booksListContainer.appendChild(categoryTitle);
 
     const booksContainer = document.createElement('div');
     booksContainer.classList.add('books-container');
