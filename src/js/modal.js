@@ -115,8 +115,13 @@ async function renderBookById(bookId) {
             </div>
             <p class="descr-of-book">${description}</p>
             <div class="buy-links">
-                <a href="${buy_links[0].url}" target="_blank" class="amazon-link"><img class="amazon-link-img"
-                        src="../img/amazon-shop-1x.png" alt="link"></a>
+                <a href="${buy_links[0].url}" target="_blank" class="amazon-link"> <svg class="amazon" width="16" height="16">
+                  <use href="../img/icons.svg#icon-amazon"></use>
+              </svg></a>
+
+                        
+             
+          </a>
                 <a href="${buy_links[1].url}" target="_blank" class="apple-link"><img class="apple-link-img" src="../img/apple-shop-1x.png"
                         alt="link"></a>
             </div>

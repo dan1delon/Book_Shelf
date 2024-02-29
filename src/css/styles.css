@@ -194,3 +194,7 @@ color: white;
 .dark-theme .amazon {
     fill: white;
 }
+
+.dark-theme .book-description {
+    color: white;
+}
