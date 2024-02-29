@@ -1,4 +1,4 @@
-import{a as c}from"./assets/icons-231ee21f.js";import"./assets/vendor-3d873957.js";const l="/Book_Shelf/assets/icons-a18bf9e2.svg#icon-ibooks",d="/Book_Shelf/assets/icons-a18bf9e2.svg#icon-trash";function r(){const o="selected-books",e=JSON.parse(localStorage.getItem(o))||[],n=document.getElementById("shopping-list-books-container");n.innerHTML="",e.forEach(t=>{const s=document.createElement("div");s.classList.add("book-card"),s.innerHTML=`
+import{a as c}from"./assets/icons-6792aac0.js";import"./assets/vendor-3d873957.js";const l="/Book_Shelf/assets/icons-a18bf9e2.svg#icon-ibooks",d="/Book_Shelf/assets/icons-a18bf9e2.svg#icon-trash";function r(){const o="selected-books",e=JSON.parse(localStorage.getItem(o))||[],n=document.getElementById("shopping-list-books-container");n.innerHTML="",e.forEach(t=>{const s=document.createElement("div");s.classList.add("book-card"),s.innerHTML=`
       <div class="cover">
           <img src="${t.book_image}" alt="Book Cover" class="book-cover">
           <div class="about">
