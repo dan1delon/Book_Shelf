@@ -54,7 +54,7 @@ export async function fetchAndDisplayBooks() {
       seeMoreButton.classList.add('see-more-button');
       seeMoreButton.textContent = 'See more';
       seeMoreButton.addEventListener('click', () => {
-        displayCategoryBooks(selectedCategory);
+        displayCategoryBooks(category.list_name);
       });
       seeMoreButtonContainer.appendChild(seeMoreButton);
       categoryElement.appendChild(seeMoreButtonContainer);
