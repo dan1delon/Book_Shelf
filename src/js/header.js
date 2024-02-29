@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const homeLink = document.getElementById('home-link');
     const shoppingListLink = document.getElementById('shopping-list-link');
     
-    if (currentPage === '/') {
+    if (currentPage === './index.html') {
         homeLink.classList.add('button');
         shoppingListLink.classList.remove('button');
     } else if (currentPage === './shopping-list.html') {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const homeLink = document.getElementById('backdrop-home-link');
     const shoppingListLink = document.getElementById('backdrop-shopping-list-link');
     
-    if (currentPage === '/') {
+    if (currentPage === './index.html') {
         homeLink.classList.add('button');
         shoppingListLink.classList.remove('button');
     } else if (currentPage === './shopping-list.html') {
