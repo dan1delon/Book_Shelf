@@ -13,7 +13,7 @@
   <script type="module" crossorigin src="/Book_Shelf/commonHelpers.js"></script>
   <link rel="modulepreload" crossorigin href="/Book_Shelf/assets/vendor-3d873957.js">
   <link rel="stylesheet" href="/Book_Shelf/assets/vendor-6c527891.css">
-  <link rel="stylesheet" href="/Book_Shelf/assets/index-e94be94f.css">
+  <link rel="stylesheet" href="/Book_Shelf/assets/index-1ab53782.css">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
   <nav class="nav-links">
     <a href="/" class="nav-link active" id="home-link">Home</a>
     <a href="../partials/shopping-list.html" class="nav-link" id="shopping-list-link">Shopping List
-      <svg class="icon-cart">
+      <svg class="icon-cart active">
         <use href="../img/icons.svg#icon-cart"></use>
       </svg>
     </a>
@@ -58,13 +58,16 @@
      <div class="background-image"></div>
  <nav class="backdrop-nav-links">
       <a href="/" class="backdrop-nav-link active" id="backdrop-home-link">Home</a>
-      <a href="/shopping-list" class="backdrop-nav-link" id="backdrop-shopping-list-link">Shopping List
+      <a href="/partials/shopping-list.html" class="backdrop-nav-link" id="backdrop-shopping-list-link">Shopping List
         <svg class="backdrop-icon-cart"><use href="../img/icons.svg#icon-cart"></use></svg>
       </a>
     </nav>
 
   </div>
 
+  <button id="scrollUpButton" class="scrollUpButton">
+     <svg class="icon-scroll" width="24" height="24"><use href="../img/icons.svg#icon-scroll"></use></svg>
+   </button>
   <div id="loading-bar">
     <div class="progress-bar"></div>
 </div>
