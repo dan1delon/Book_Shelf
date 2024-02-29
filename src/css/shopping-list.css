@@ -141,6 +141,9 @@ right: 14px;
 }
 
 .container-shop {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     width: 100%;
     max-width: 375px;
     padding: 40px 55px 0 20px;   
@@ -182,7 +185,7 @@ right: 14px;
 
 .container-main-shopping {
     display: flex;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     /* выравнивание элементов по верхнему краю */
 }
 
@@ -202,7 +205,6 @@ right: 14px;
         background-image: url(../img/shoplist-2x-mob.png);
     }
 }
-
 
 @media screen and (min-width: 375px) {
 .container-main-shopping .donations-container {
@@ -427,7 +429,5 @@ p.book-author {
     right: 24px;
     bottom: 10px;
 }
-
-
 
 }
