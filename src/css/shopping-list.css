@@ -32,7 +32,7 @@
         height: 142px;
   }
 
-  .book-title {
+  h2.book-title {
 
     font-weight: 700;
         font-size: 16px;
@@ -75,7 +75,7 @@
           
 }
 
-.book-author {
+p.book-author {
         font-style: italic;
         font-weight: 400;
         font-size: 12px;
@@ -140,7 +140,7 @@ right: 14px;
 }
 
 .container-shop {
-width: 100%;
+    width: 100%;
     max-width: 375px;
     padding: 40px 55px 0 20px;   
 }
@@ -179,6 +179,12 @@ width: 100%;
         margin-left: 35px;  
 }
 
+.container-main-shopping {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 @media (min-device-pixel-ratio: 2),
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
@@ -190,7 +196,7 @@ width: 100%;
 
 @media screen and (min-width: 768px) {
 
-.content-cart {
+    .content-cart {
         background-image: url(../img/shoplist-1x-tablet.png);
         background-size: 322px 241px;
         background-repeat: no-repeat;
@@ -211,7 +217,7 @@ width: 100%;
         .container-shop {
             width: 100%;
             max-width: 768px;
-            padding: 40px 209px 0 32px;
+            /* padding: 40px 209px 0 32px; */
         }
 
 .text-cart {
@@ -254,7 +260,7 @@ overflow: visible;
 
 }
 
-.book-author {
+p.book-author {
     position: absolute;
     bottom: 24px;
     overflow: visible;
@@ -320,7 +326,7 @@ overflow: visible;
 .container-shop {
     width: 100%;
     max-width: 1440px;
-    padding: 40px 209px 0 32px;
+    /* padding: 40px 209px 0 32px; */
 }
 
 .text-cart {
@@ -360,7 +366,7 @@ overflow: visible;
     padding-top: 14px;
 }
 
-.book-author {
+p.book-author {
     position: absolute;
     bottom: 24px;
     overflow: visible;
