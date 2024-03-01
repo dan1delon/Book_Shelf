@@ -46,35 +46,11 @@
 body {
     font-family: "DM-Sans", sans-serif;
     color: #111;
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
 }
 
-/* =========================================== */
-
-/* .container{
-    display: flex;
-    flex-wrap: wrap;
-    width: 1440px;
-    padding: 40px 24px 72px;
-    margin: 0 auto;
-} */
-
-/* .container {
-    min-width: 320px;
-    margin: 0 auto;
-    padding: 0 20px;
-} */
-
-/* @media screen and (min-width: 375px) {
-    .container {
-        width: 335px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-} */
-
-/* =========================================== */
-
-/* .sidebar {
+.sidebar {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -98,14 +74,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-} */
+}
 
 
 @media screen and (min-width: 768px) {
 
-    .container {
+    /* .container-main {
+        display: flex;
         padding: 40px 32px 100px;
-/*     .container-main {
+        flex-direction: column;
+        gap: 100px;
+      } */
+/*  ==================================  */
+ 
+    .container-main {
         width: 704px;
         padding: 40px 0 100px;
     }
@@ -113,26 +95,30 @@ body {
     .sidebar {
         flex-wrap: nowrap;
         gap: 32px;
-        margin-bottom: 100px; */
+        margin-bottom: 100px;
     }
 }
 
 @media screen and (min-width: 1440px) {
 
-    .container {
+    .container-main {
         padding: 40px 32px 100px;
         display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
 
-/*     .container-main {
-
+     .container-main {
         width: 1440px;
         padding: 40px 24px 72px;
         margin: 0 auto;
         align-items: flex-start;
         justify-content: center;
-    } */
+    
     }
     
+    }
+
 
     .sidebar {
         display: flex;
@@ -141,4 +127,77 @@ body {
         align-items: center;
         gap: 0px;
     }
+
+
+
+:root {
+    --bg-color-light: white;
+    --text-color-light: rgb(17, 17, 17);
+    --bg-color-dark: black;
+    --text-color-dark: white;
+    --hover-color-dark: rgb(234, 198, 69);
+}
+
+/* Добавьте стили для элементов в зависимости от выбранной темы */
+.dark-theme {
+    background-color: rgb(32, 32, 36);
+    color: var(--text-color-dark);
+}
+
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4 {
+    color: white;
+}
+
+
+.dark-theme .category-btn {
+    color: rgba(255, 255, 255, 0.6);
+    background: rgb(32, 32, 36);
+}
+
+.dark-theme .category-btn:focus {
+    color: var(--hover-color-dark);
+}
+
+.dark-theme button.category-btn.active {
+    color: var(--hover-color-dark);
+}
+
+.dark-theme .text-cart {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.dark-theme .see-more-button {
+    background-color: rgb(32, 32, 36);
+    color: white;  
+}
+
+
+.dark-theme .see-more-button:hover {
+background-color: rgb(79, 46, 232);
+color: white;
+}
+
+.dark-theme .x-btn {
+    fill: white;
+    stroke: white;
+}
+
+.dark-theme .modal {
+    background-color: rgb(32, 32, 36);
+    color: var(--text-color-dark);
+}
+
+.dark-theme button.add-to-localSt {
+    color: white;
+}
+
+.dark-theme .amazon {
+    fill: white;
+}
+
+.dark-theme .book-description {
+    color: white;
 }

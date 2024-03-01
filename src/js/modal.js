@@ -1,4 +1,6 @@
 import { getBookById } from "./fetchAPI";
+import amazon from "../img/icons.svg#icon-amazon";
+import appleBook from "../img/apple-shop-1x.png";
 
 const refs = {
   books: document.querySelector('.books-section'),
@@ -12,7 +14,8 @@ const refs = {
 
 refs.books.addEventListener('click', openModal);
 
-let currentBook = [];
+let currentBook = null;
+let modalBtn = null;
 
 async function openModal(e) {
   e.preventDefault();
@@ -32,7 +35,7 @@ async function openModal(e) {
 
   await renderBookById(bookId);
 
-  const modalBtn = document.querySelector('.add-to-localSt')
+  modalBtn = document.querySelector('.add-to-localSt')
   modalBtn.addEventListener('click', addToLocalStorage);
 }
  
@@ -41,7 +44,7 @@ function closeModal(e) {
   refs.backdrop.removeEventListener('click', handleBackdropClick);
   refs.xBtn.removeEventListener('click', closeModal);
   window.removeEventListener('keydown', onEscKeyPress);
-  // refs.modalBtn.removeEventListener('click', addToLocalStorage);
+  modalBtn.removeEventListener('click', addToLocalStorage);
 
   document.body.classList.remove('no-scroll');
   refs.modal.classList.remove('is-open');
@@ -60,21 +63,18 @@ function handleBackdropClick(e) {
 }
 
 function addToLocalStorage() {
-
-  // const key = 'selected-books';
-  // localStorage.setItem(key, JSON.stringify(currentBook));
   
   const key = 'selected-books';
   const savedBooks = JSON.parse(localStorage.getItem(key)) || [];
 
-  const bookId = currentBook[0]._id;
+  const bookId = currentBook._id;
   const isBookSaved = savedBooks.some(book => book._id === bookId);
 
   if (isBookSaved) {
     const updatedBooks = savedBooks.filter(book => book._id !== bookId);
     localStorage.setItem(key, JSON.stringify(updatedBooks));
   } else {
-    savedBooks.push(currentBook[0]);
+    savedBooks.push(currentBook);
     localStorage.setItem(key, JSON.stringify(savedBooks));
   }
 
@@ -98,7 +98,7 @@ async function renderBookById(bookId) {
   try {
     const data = await getBookById(bookId);
     const { book_image, title, author, description, buy_links } = data;
-    currentBook.push(data);
+    currentBook = data;
 
     // if (description === '') {
     //   refs.descriptionBookEl.textContent = 'there is no description of this book';
@@ -117,9 +117,14 @@ async function renderBookById(bookId) {
             </div>
             <p class="descr-of-book">${description}</p>
             <div class="buy-links">
-                <a href="${buy_links[0].url}" target="_blank" class="amazon-link"><img class="amazon-link-img"
-                        src="../img/amazon-shop-1x.png" alt="link"></a>
-                <a href="${buy_links[1].url}" target="_blank" class="apple-link"><img class="apple-link-img" src="../img/apple-shop-1x.png"
+                <a href="${buy_links[0].url}" target="_blank" class="amazon-link"> <svg class="amazon" width="16" height="16">
+                  <use href="${amazon}"></use>
+              </svg></a>
+
+                        
+             
+          </a>
+                <a href="${buy_links[1].url}" target="_blank" class="apple-link"><img class="apple-link-img" src="${appleBook}"
                         alt="link"></a>
             </div>
            </div>

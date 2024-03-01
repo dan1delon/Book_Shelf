@@ -57,9 +57,10 @@ function bestsellersMarkup(bestBooks, name) {
 
 async function categoryBooks(selectedCategory) {
   try {
+    bestTitle.style.display = 'none';
     const currentBooks = await getBooksFromCategory(selectedCategory);
     if (currentBooks.length === 0) {
-      throw new Error();
+      return;
     }
     const content = booksMarkup(currentBooks, selectedCategory);
     booksContent.innerHTML = content;
@@ -71,7 +72,7 @@ async function categoryBooks(selectedCategory) {
 
 fetchAndDisplayBooks();
 
-function booksMarkup(books, name) {
+export function booksMarkup(books, name) {
   const title = styleTitle(name);
 
   const markup = `${title}
@@ -147,26 +148,26 @@ function handleContent(e) {
     ? categoryBooks(currentCategory)
     : bestsellersContent();
   prevCategory = currentCategory;
-  changeActiveCategory(currentCategory);
+  // changeActiveCategory(currentCategory);
 }
 
-function changeActiveCategory(currentItem) {
-  const buttons = [...categoryList.querySelectorAll('.category-btn')];
-  const activeBtn = buttons.find(
-    button => button.dataset.listName === currentItem
-  );
+// function changeActiveCategory(currentItem) {
+//   const buttons = [...categoryList.querySelectorAll('.category-btn')];
+//   const activeBtn = buttons.find(
+//     button => button.dataset.listName === currentItem
+//   );
 
-  const prevActiveBtn = categoryList.querySelector('.active');
+//   const prevActiveBtn = categoryList.querySelector('.active');
 
-  activeBtn.classList.add('active');
-  prevActiveBtn.classList.remove('active');
+//   activeBtn.classList.add('active');
+//   prevActiveBtn.classList.remove('active');
 
-  scrollToStart(activeBtn);
-}
+//   scrollToStart(activeBtn);
+// }
 
-function scrollToStart(activeBtn) {
-  activeBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
-}
+// function scrollToStart(activeBtn) {
+//   activeBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+// }
 
 categoryList.addEventListener('click', handleContent);
 booksContent.addEventListener('click', handleContent);

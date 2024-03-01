@@ -1,4 +1,4 @@
-
+ 
   .book-card {
     border: 2px solid rgba(79, 46, 232, 0.4);
         border-radius: 16px;
@@ -27,9 +27,9 @@
 
   .book-cover {
       max-width: 100%;
-    border-radius: 8px;
-        width: 100px;
-        height: 142px;
+      border-radius: 8px;
+      width: 100px;
+      height: 142px;
   }
 
   h2.book-title {
@@ -140,9 +140,12 @@ right: 14px;
 }
 
 .container-shop {
-width: 100%;
-    max-width: 375px;
-    padding: 40px 55px 0 20px;   
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* width: 335px; */
+    margin: 0 auto;
+    padding: 40px 0 0 20px;   
 }
 
 .title-shoplist {
@@ -179,10 +182,19 @@ width: 100%;
         margin-left: 35px;  
 }
 
-/* .donations-container {
-    display: none;
-    opacity: 0;
-} */
+.container-main-shopping {
+    display: flex;
+    margin: 0 auto;
+}
+
+.main-content {
+    flex-grow: 1;
+    /* устанавливаем ширину, чтобы основное содержимое занимало оставшееся пространство */
+}
+
+#donation-block {
+    margin: 40px 24px;
+}
 
 @media (min-device-pixel-ratio: 2),
 (min-resolution: 192dpi),
@@ -192,10 +204,32 @@ width: 100%;
     }
 }
 
+@media screen and (min-width: 375px) {
+.container-main-shopping .donations-container {
+    display: none;
+}
+
+.container-main-shopping .sidebar {
+    display: none;
+}
+
+.container-main-shopping {
+    width: 375px;
+    margin: 0 auto;
+}
+}
 
 @media screen and (min-width: 768px) {
 
-.content-cart {
+    .container-main-shopping {
+            display: flex;
+            margin: 0 auto;
+            width: 768px;
+        }
+.donations-container {
+        display: block;
+    }
+    .content-cart {
         background-image: url(../img/shoplist-1x-tablet.png);
         background-size: 322px 241px;
         background-repeat: no-repeat;
@@ -304,10 +338,17 @@ p.book-author {
 
 @media screen and (min-width: 1440px) {
 
-    /* .donations-container {
+    .container-main-shopping .sidebar {
             display: block;
-            opacity: 1;
-        } */
+        }
+
+.container-main-shopping .donations-container {
+        display: block;
+    }
+
+        .container-main-shopping {
+            width: 1440px;
+        }
 
     .content-cart {
         background-image: url(../img/shoplist-1x-pc.png);
@@ -410,5 +451,16 @@ p.book-author {
     bottom: 10px;
 }
 
+}
 
+@media screen and (min-width: 375px) {
+    .container-main-shopping .sidebar {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container-main-shopping .sidebar {
+        display: block;
+    }
 }
