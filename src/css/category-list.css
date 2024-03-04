@@ -193,11 +193,7 @@
 
 
 @media (min-width: 768px) {
-        /* aside {
-        flex-direction: row;
-        gap: 32px;
-        justify-content: center;
-    } */
+
     .category {
         margin-bottom: 0;
         font-size: 18px;

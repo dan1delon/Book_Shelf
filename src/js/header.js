@@ -93,9 +93,9 @@ window.onscroll = function() {
 };
 function scrollFunction() {
     if (document.documentElement.scrollTop > 250) {
-        document.getElementById("scrollUpButton").style.display = "block";
+        document.getElementById("scrollUpButton").style.opacity = "1";
     } else {
-        document.getElementById("scrollUpButton").style.display = "none";
+        document.getElementById("scrollUpButton").style.opacity = "0";
     }
 }
 // Добавляем обработчик событий клика для кнопки прокрутки наверх

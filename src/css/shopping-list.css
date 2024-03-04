@@ -186,9 +186,12 @@ right: 14px;
     margin: 0 auto;
 }
 
+.container-main-shopping .sidebar {
+    display: none;
+}
+
 .main-content {
     flex-grow: 1;
-    /* устанавливаем ширину, чтобы основное содержимое занимало оставшееся пространство */
 }
 
 #donation-block {
@@ -233,9 +236,9 @@ right: 14px;
             margin: 0 auto;
             width: 768px;
         }
-.donations-container {
+/* .donations-container {
         display: block;
-    }
+    } */
     .content-cart {
         background-image: url(../img/shoplist-1x-tablet.png);
         background-size: 322px 241px;
