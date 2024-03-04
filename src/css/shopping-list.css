@@ -103,8 +103,8 @@ height: 21px;
 }
 
 .amazon:hover {
-    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, .35));
-    mix-blend-mode: luminosity;
+    /* filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, .35)); */
+    /* mix-blend-mode: luminosity; */
 }
 
 .ibook{
@@ -113,8 +113,8 @@ height: 21px;
 }
 
 .ibook:hover {
-    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, .35));
-    mix-blend-mode: luminosity;
+    /* filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, .35)); */
+    /* mix-blend-mode: luminosity; */
 }
 
 
