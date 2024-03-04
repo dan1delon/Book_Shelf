@@ -339,6 +339,9 @@ input:checked+.slider:before {
 
 .scrollUpButton {
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     bottom: 20px;
     right: 20px;
     background-color: rgb(79, 46, 232);
