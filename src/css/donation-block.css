@@ -58,6 +58,11 @@
   cursor: pointer;
 }
 
+.use-svg{
+  stroke: #4F2EE8;
+  fill: #4F2EE8;
+}
+
 @media screen and (min-width: 768px) {
   .donations-container{
     border-radius: 16px;
