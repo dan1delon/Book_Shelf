@@ -101,24 +101,20 @@ p.book-author {
 width: 42px;
     height: 21px; 
     mix-blend-mode: luminosity;
-    transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .amazon:hover {
     filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, .35));
-    mix-blend-mode: luminosity;
 }
 
 .ibook{
     mix-blend-mode: luminosity;
     width: 16px;
     height: 16px;
-    transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ibook:hover {
     filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, .35));
-    mix-blend-mode: luminosity;
 }
 
 

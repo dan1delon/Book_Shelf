@@ -129,7 +129,7 @@ const splide = new Splide('.splide', {
   gap: 20,
   fixedHeight: 32,
   arrows: false,
-  speed: 800,
+  rewindSpeed: 1000,
   drag: false,
 });
 
