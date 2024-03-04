@@ -29,6 +29,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 335px;
+    max-height: 95%;
+    overflow: auto;
     flex-shrink: 0;
     background: var(--DAIRY, #FCFCFC);
     padding: 40px 24px;
@@ -175,6 +177,7 @@
     .modal{
         width: 579px;
         padding: 40px;
+        overflow: hidden;
     }
 
     .modal-content{
