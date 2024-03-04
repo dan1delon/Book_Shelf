@@ -115,7 +115,7 @@ async function renderBookById(bookId) {
             </div>
             <p class="descr-of-book">${descriptionText}</p>
             <div class="buy-links">
-                <a href="${buy_links[0].url}" target="_blank" class="amazon-link"> <svg class="amazon" width="16" height="16">
+                <a href="${buy_links[0].url}" target="_blank" class="amazon-link"> <svg class="amazon-link-img" width="16" height="16">
                   <use href="${amazon}"></use>
               </svg></a>
 

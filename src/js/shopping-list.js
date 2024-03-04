@@ -29,12 +29,12 @@ function renderBooksFromLocalStorage() {
       </div>
       <div class="buy-book">
           <a href="${book.buy_links[0].url}" target="_blank">
-              <svg class="amazon" width="16" height="16">
+              <svg class="amazon-link-img" width="16" height="16">
                   <use href="${amazon}"></use>
               </svg>
           </a>
           <a href="${book.buy_links[1].url}" target="_blank">
-              <svg class="ibook" width="16" height="16">
+              <svg class="apple-link-img" width="16" height="16">
                   <use href="${appleBook}"></use>
               </svg>
           </a>
