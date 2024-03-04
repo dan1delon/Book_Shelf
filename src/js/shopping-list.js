@@ -14,13 +14,16 @@ function renderBooksFromLocalStorage() {
   savedBooks.forEach(book => {
     const bookCard = document.createElement('div');
     bookCard.classList.add('book-card');
+
+    const descriptionText = book.description ? book.description : 'We are sorry. There is no description for this book';
+
     bookCard.innerHTML = `
       <div class="cover">
           <img src="${book.book_image}" alt="Book Cover" class="book-cover">
           <div class="about">
               <h2 class="book-title">${book.title}</h2>
               <p class="book-category">${book.list_name}</p>
-              <p class="book-description">${book.description}</p>
+              <p class="book-description">${descriptionText}</p>
               <p class="book-author">${book.author}</p>
           </div>
       </div>

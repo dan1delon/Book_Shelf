@@ -263,7 +263,7 @@ span.book-author {
   position: absolute;
   text-align: center;
   transition: all 300ms ease-in-out;
-  transform: translateY(-70px);
+  transform: translateY(-84px);
   opacity: 0;
 }
 

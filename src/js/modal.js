@@ -100,9 +100,7 @@ async function renderBookById(bookId) {
     const { book_image, title, author, description, buy_links } = data;
     currentBook = data;
 
-    // if (description === '') {
-    //   refs.descriptionBookEl.textContent = 'there is no description of this book';
-    // } 
+  const descriptionText = description ? description : 'We are sorry. There is no description for this book.';
 
     const isActivBook =  Boolean(
       JSON.parse(localStorage.getItem('selected-books'))?.find(el => el._id === data._id)
@@ -115,7 +113,7 @@ async function renderBookById(bookId) {
                 <h3 class="title-of-book">${title}</h3>
                 <p class="author-of-book">${author}</p>
             </div>
-            <p class="descr-of-book">${description}</p>
+            <p class="descr-of-book">${descriptionText}</p>
             <div class="buy-links">
                 <a href="${buy_links[0].url}" target="_blank" class="amazon-link"> <svg class="amazon" width="16" height="16">
                   <use href="${amazon}"></use>

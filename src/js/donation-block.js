@@ -130,6 +130,7 @@ const splide = new Splide('.splide', {
   fixedHeight: 32,
   arrows: false,
   speed: 800,
+  drag: false,
 });
 
 splide.mount();
