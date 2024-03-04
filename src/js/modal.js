@@ -122,7 +122,7 @@ async function renderBookById(bookId) {
                         
              
           </a>
-                <a href="${buy_links[1].url}" target="_blank" class="apple-link"><img class="apple-link-img" src="${appleBook}"
+                <a href="${buy_links[1].url}" target="_blank" class="apple-link"><img class="ibook" src="${appleBook}"
                         alt="link"></a>
             </div>
            </div>
