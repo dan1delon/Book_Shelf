@@ -46,7 +46,7 @@ import{a as D}from"./assets/icons-9837f504.js";import{a as p}from"./assets/vendo
             </div>
             <p class="descr-of-book">${u}</p>
             <div class="buy-links">
-                <a href="${l[0].url}" target="_blank" class="amazon-link"> <svg class="amazon" width="16" height="16">
+                <a href="${l[0].url}" target="_blank" class="amazon-link"> <svg class="amazon" width="62" height="19">
                   <use href="${D}"></use>
               </svg></a>
 
